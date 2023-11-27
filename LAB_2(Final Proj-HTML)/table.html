@@ -1,0 +1,1955 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Forests in the world</title>
+        <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
+        <meta charset="utf-8">
+        <meta name="description" content="fictitious information about the world">
+    </head>
+
+    <body>
+        
+        
+            <a href="main.html"><big>Twilight Grove</big></a>
+            &nbsp;
+            <a href="table.html"><big>Распределение лесов в мире</big></a>
+            <hr>
+        
+            <p><img src="images/image_22.jpg" width="40%" height="40%" align="right" hspace="3px" alt="National Willamette forest, Oregon (USA)" title="National Willamette forest, Oregon (USA)"></p>
+              
+            <p align="left">
+                <big><big>
+                    Уничтожение лесов и других лесных массивов часто происходит, из-за
+                    вырубки леса для сельскохозяйственных, 
+                    городских или других целей землепользования. Негативные последствия 
+                    вырубки лесов включают потерю биоразнообразия, 
+                    увеличение выбросов парниковых газов, уменьшение количества местных осадков и 
+                    снижение способности лесов регулировать климат и поддерживать экосистемы.
+                    Необходимо признавать важность лесов и их сохранение. 
+                    Усилия по сохранению могут помочь предотвратить экологические 
+                    последствия вырубки и поддержать 
+                    существование и развитие. Сохранение также может 
+                    помочь снизить риск исчезновения растений и животных, 
+                    а также помочь защитить культурное наследие. 
+                    Уничтожение лесов, оказывает пагубное влияние на животных и птиц, 
+                    которые называют эту среду обитания своим домом. 
+                    Многие виды живут в ветвях, гнездах и норах деревьев. 
+                    Когда леса вырубаются, животные и птицы теряют свои дома 
+                    и вынуждены перемещаться, адаптироваться или умирать. 
+                    Если эта среда обитания будет уничтожена, то же самое 
+                    произойдет и со сложной экосистемой, которая развивалась 
+                    на протяжении сотен или тысяч лет. Уничтожая леса и места
+                    их обитания, мы уничтожаем жизненно 
+                    важный аспект биоразнообразия нашей планеты, который 
+                    необхдим для здорового существования.
+                </big></big>
+            </p>
+        <details>
+            <summary><big><big>График</big></big></summary>
+            <form>
+                <fieldset>
+                    <b>Значение по Х</b><br>
+                    
+                    <input  type="radio"  name="X"><big><big>Стоимость</big></big><br>
+                    <input  type="radio"  name="X"><big><big>максимальная высота</big></big><br>
+                    <input  type="radio"  name="X"><big><big>Возраст</big></big><br>
+                    <input  type="radio"  name="X"><big><big>Год</big></big><br>
+                    <b>Значение по Y</b><br>
+                    <input  type="radio"  name="Y"><big><big>Регион</big></big><br>
+                    <input  type="radio"  name="Y"><big><big>NDVI</big></big><br>
+                    <input type="button" value="Построить">
+                </fieldset>
+            </form>
+            
+        </details>
+
+        <details>
+            <summary><big><big>Сортировка</big></big></summary>
+            <form>
+                <fieldset>
+                    <input  type="radio"  name="order"><big><big>от меньшего</big></big><br>
+                    <input  type="radio"  name="order"><big><big>от большего</big></big><br>
+                    <input  type="radio"  name="choose"><big><big>По стоимости</big></big><br>
+                    <input  type="radio"  name="choose"><big><big>По возрасту</big></big><br>
+                    <input  type="radio"  name="choose"><big><big>По высоте</big></big><br>
+                    <input  type="radio"  name="choose"><big><big>По NDVI</big></big><br>
+                    <input type="button" value="Сортировать">
+                </fieldset>
+            </form>
+        </details>
+
+        <details>
+            
+            <summary><big><big>Фильтр</big></big></summary>
+            <fieldset>
+                <form>
+                    <big><big>
+                        <label>Регион: </label>
+                        <input type="text"><br>
+                    
+                        <label>Стоимость: от</label>
+                        <input type="number">
+                        <label> до</label>
+                        <input type="number"><br>
+
+                        <label>Макс. высота: от</label>
+                        <input type="number">
+                        <label> до</label>
+                        <input type="number"><br>
+                    
+                        <label>Возраст: от</label>
+                        <input type="number">
+                        <label> до</label>
+                        <input type="number"><br>
+
+                        <label>NDVI: от</label>
+                        <input type="text">
+                        <label> до</label>
+                        <input type="text"><br>
+
+                        <input type="button" value="Фильтровать">
+                    </big></big>
+                </form>
+            </fieldset>
+        </details>
+
+        <details>
+                <summary><big><big>Распределение лесов</big></big></summary>
+                <table border="1px">
+                    <thead>
+                        <tr>
+                            <th nowrap>#</th>
+                            <th nowrap>Регион</th>
+                            <th nowrap>Стоимость</th>
+                            <th nowrap>Макс. высота</th>
+                            <th nowrap>Возраст</th>
+                            <th nowrap>NDVI</th>
+                            <th nowrap>True color</th>
+                            <th nowrap> 1950 </th>
+                            <th nowrap> 1955 </th>
+                            <th nowrap> 1960 </th>
+                            <th nowrap> 1965 </th>
+                            <th nowrap> 1970 </th>
+                            <th nowrap> 1975 </th>
+                            <th nowrap> 1980 </th>
+                            <th nowrap> 1985 </th>
+                            <th nowrap> 1990 </th>
+                            <th nowrap> 1995 </th>
+                            <th nowrap> 2000 </th>
+                            <th nowrap> 2005 </th>
+                            <th nowrap> 2010 </th>
+                            <th nowrap> 2015 </th>
+                            <th nowrap> 2020 </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td nowrap> 1 </td>
+                            <td nowrap> Абхазия </td>
+                            <td nowrap> 9841492 </td>
+                            <td nowrap> 100 </td>
+                            <td nowrap> 2012 </td>
+                            <td nowrap> 0.78 </td>
+                            <td nowrap> rgb( 121 , 255 , 226 ) </td>
+                            <td nowrap> 2478930 </td>
+                            <td nowrap> 2226934 </td>
+                            <td nowrap> 4723984 </td>
+                            <td nowrap> 2434454 </td>
+                            <td nowrap> 827276 </td>
+                            <td nowrap> 3406892 </td>
+                            <td nowrap> 1182781 </td>
+                            <td nowrap> 1576245 </td>
+                            <td nowrap> 4608264 </td>
+                            <td nowrap> 2083317 </td>
+                            <td nowrap> 2286957 </td>
+                            <td nowrap> 3944449 </td>
+                            <td nowrap> 1643061 </td>
+                            <td nowrap> 526927 </td>
+                            <td nowrap> 3870467 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 2 </td>
+                            <td nowrap> Австралия </td>
+                            <td nowrap> 5787475 </td>
+                            <td nowrap> 69 </td>
+                            <td nowrap> 160 </td>
+                            <td nowrap> 0.22 </td>
+                            <td nowrap> rgb( 17 , 255 , 22 ) </td>
+                            <td nowrap> 3125971 </td>
+                            <td nowrap> 4302831 </td>
+                            <td nowrap> 4666091 </td>
+                            <td nowrap> 1135846 </td>
+                            <td nowrap> 1551195 </td>
+                            <td nowrap> 1348108 </td>
+                            <td nowrap> 532417 </td>
+                            <td nowrap> 2075940 </td>
+                            <td nowrap> 4026319 </td>
+                            <td nowrap> 1246253 </td>
+                            <td nowrap> 1688895 </td>
+                            <td nowrap> 4815059 </td>
+                            <td nowrap> 2188301 </td>
+                            <td nowrap> 2620196 </td>
+                            <td nowrap> 2558671 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 3 </td>
+                            <td nowrap> Австрия </td>
+                            <td nowrap> 3321194 </td>
+                            <td nowrap> 105 </td>
+                            <td nowrap> 4869 </td>
+                            <td nowrap> 0.82 </td>
+                            <td nowrap> rgb( 224 , 255 , 212 ) </td>
+                            <td nowrap> 4502616 </td>
+                            <td nowrap> 4379693 </td>
+                            <td nowrap> 3442927 </td>
+                            <td nowrap> 3936575 </td>
+                            <td nowrap> 1981318 </td>
+                            <td nowrap> 3513838 </td>
+                            <td nowrap> 1016668 </td>
+                            <td nowrap> 1201119 </td>
+                            <td nowrap> 4064704 </td>
+                            <td nowrap> 2467371 </td>
+                            <td nowrap> 2689954 </td>
+                            <td nowrap> 3999983 </td>
+                            <td nowrap> 4510032 </td>
+                            <td nowrap> 2698355 </td>
+                            <td nowrap> 1201178 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 4 </td>
+                            <td nowrap> Азербайджан </td>
+                            <td nowrap> 5704521 </td>
+                            <td nowrap> 91 </td>
+                            <td nowrap> 520 </td>
+                            <td nowrap> 0.43 </td>
+                            <td nowrap> rgb( 78 , 255 , 110 ) </td>
+                            <td nowrap> 2055905 </td>
+                            <td nowrap> 1055973 </td>
+                            <td nowrap> 3615828 </td>
+                            <td nowrap> 816760 </td>
+                            <td nowrap> 4076182 </td>
+                            <td nowrap> 2437152 </td>
+                            <td nowrap> 1955529 </td>
+                            <td nowrap> 1341243 </td>
+                            <td nowrap> 1368308 </td>
+                            <td nowrap> 2640532 </td>
+                            <td nowrap> 606552 </td>
+                            <td nowrap> 3963824 </td>
+                            <td nowrap> 2751376 </td>
+                            <td nowrap> 3890813 </td>
+                            <td nowrap> 2942886 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 5 </td>
+                            <td nowrap> Албания </td>
+                            <td nowrap> 8403467 </td>
+                            <td nowrap> 60 </td>
+                            <td nowrap> 3185 </td>
+                            <td nowrap> 0.65 </td>
+                            <td nowrap> rgb( 62 , 255 , 179 ) </td>
+                            <td nowrap> 899412 </td>
+                            <td nowrap> 3131886 </td>
+                            <td nowrap> 1149133 </td>
+                            <td nowrap> 4736844 </td>
+                            <td nowrap> 2109166 </td>
+                            <td nowrap> 4832061 </td>
+                            <td nowrap> 1927787 </td>
+                            <td nowrap> 1422498 </td>
+                            <td nowrap> 2357275 </td>
+                            <td nowrap> 3815697 </td>
+                            <td nowrap> 4829371 </td>
+                            <td nowrap> 2905336 </td>
+                            <td nowrap> 4390643 </td>
+                            <td nowrap> 4245583 </td>
+                            <td nowrap> 4559371 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 6 </td>
+                            <td nowrap> Алжир </td>
+                            <td nowrap> 5871319 </td>
+                            <td nowrap> 51 </td>
+                            <td nowrap> 492 </td>
+                            <td nowrap> 0.85 </td>
+                            <td nowrap> rgb( 110 , 255 , 54 ) </td>
+                            <td nowrap> 1906444 </td>
+                            <td nowrap> 1559241 </td>
+                            <td nowrap> 1882662 </td>
+                            <td nowrap> 3978697 </td>
+                            <td nowrap> 2012523 </td>
+                            <td nowrap> 3963527 </td>
+                            <td nowrap> 3099298 </td>
+                            <td nowrap> 1027191 </td>
+                            <td nowrap> 769365 </td>
+                            <td nowrap> 1938047 </td>
+                            <td nowrap> 2928593 </td>
+                            <td nowrap> 3174132 </td>
+                            <td nowrap> 2590697 </td>
+                            <td nowrap> 3935116 </td>
+                            <td nowrap> 1949527 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 7 </td>
+                            <td nowrap> Ангола </td>
+                            <td nowrap> 764144 </td>
+                            <td nowrap> 79 </td>
+                            <td nowrap> 1775 </td>
+                            <td nowrap> 0.39 </td>
+                            <td nowrap> rgb( 187 , 255 , 97 ) </td>
+                            <td nowrap> 529259 </td>
+                            <td nowrap> 4916232 </td>
+                            <td nowrap> 3985100 </td>
+                            <td nowrap> 2741931 </td>
+                            <td nowrap> 2560843 </td>
+                            <td nowrap> 1913248 </td>
+                            <td nowrap> 1773328 </td>
+                            <td nowrap> 1742721 </td>
+                            <td nowrap> 950108 </td>
+                            <td nowrap> 3709479 </td>
+                            <td nowrap> 3627067 </td>
+                            <td nowrap> 4620666 </td>
+                            <td nowrap> 988837 </td>
+                            <td nowrap> 3424544 </td>
+                            <td nowrap> 528184 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 8 </td>
+                            <td nowrap> Андорра </td>
+                            <td nowrap> 4535415 </td>
+                            <td nowrap> 116 </td>
+                            <td nowrap> 4214 </td>
+                            <td nowrap> 0.23 </td>
+                            <td nowrap> rgb( 30 , 255 , 95 ) </td>
+                            <td nowrap> 2291084 </td>
+                            <td nowrap> 714388 </td>
+                            <td nowrap> 2451599 </td>
+                            <td nowrap> 4488262 </td>
+                            <td nowrap> 3898996 </td>
+                            <td nowrap> 1939117 </td>
+                            <td nowrap> 1330054 </td>
+                            <td nowrap> 4005833 </td>
+                            <td nowrap> 2674203 </td>
+                            <td nowrap> 3311980 </td>
+                            <td nowrap> 2816579 </td>
+                            <td nowrap> 2516307 </td>
+                            <td nowrap> 3842503 </td>
+                            <td nowrap> 3365420 </td>
+                            <td nowrap> 2675868 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 9 </td>
+                            <td nowrap> Антигуа </td>
+                            <td nowrap> 1919600 </td>
+                            <td nowrap> 102 </td>
+                            <td nowrap> 4360 </td>
+                            <td nowrap> 0.78 </td>
+                            <td nowrap> rgb( 165 , 255 , 238 ) </td>
+                            <td nowrap> 4870081 </td>
+                            <td nowrap> 2238494 </td>
+                            <td nowrap> 1832145 </td>
+                            <td nowrap> 1486699 </td>
+                            <td nowrap> 1496444 </td>
+                            <td nowrap> 3089902 </td>
+                            <td nowrap> 2595203 </td>
+                            <td nowrap> 2035184 </td>
+                            <td nowrap> 4051079 </td>
+                            <td nowrap> 3073976 </td>
+                            <td nowrap> 3597219 </td>
+                            <td nowrap> 4971625 </td>
+                            <td nowrap> 3372962 </td>
+                            <td nowrap> 3052372 </td>
+                            <td nowrap> 2580216 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 10 </td>
+                            <td nowrap> Барбуда </td>
+                            <td nowrap> 6984463 </td>
+                            <td nowrap> 106 </td>
+                            <td nowrap> 1922 </td>
+                            <td nowrap> 0.36 </td>
+                            <td nowrap> rgb( 149 , 255 , 19 ) </td>
+                            <td nowrap> 4778026 </td>
+                            <td nowrap> 3549054 </td>
+                            <td nowrap> 1848406 </td>
+                            <td nowrap> 4054275 </td>
+                            <td nowrap> 1487521 </td>
+                            <td nowrap> 1159480 </td>
+                            <td nowrap> 3851051 </td>
+                            <td nowrap> 961838 </td>
+                            <td nowrap> 1922273 </td>
+                            <td nowrap> 1973819 </td>
+                            <td nowrap> 2274144 </td>
+                            <td nowrap> 770269 </td>
+                            <td nowrap> 2761414 </td>
+                            <td nowrap> 2758271 </td>
+                            <td nowrap> 4718081 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 11 </td>
+                            <td nowrap> Аргентина </td>
+                            <td nowrap> 6235401 </td>
+                            <td nowrap> 88 </td>
+                            <td nowrap> 145 </td>
+                            <td nowrap> 0.44 </td>
+                            <td nowrap> rgb( 225 , 255 , 215 ) </td>
+                            <td nowrap> 897472 </td>
+                            <td nowrap> 2135180 </td>
+                            <td nowrap> 3424722 </td>
+                            <td nowrap> 3788417 </td>
+                            <td nowrap> 4321258 </td>
+                            <td nowrap> 584237 </td>
+                            <td nowrap> 2999625 </td>
+                            <td nowrap> 1925665 </td>
+                            <td nowrap> 2182127 </td>
+                            <td nowrap> 787849 </td>
+                            <td nowrap> 1145977 </td>
+                            <td nowrap> 2355350 </td>
+                            <td nowrap> 4995027 </td>
+                            <td nowrap> 2842927 </td>
+                            <td nowrap> 3029071 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 12 </td>
+                            <td nowrap> Армения </td>
+                            <td nowrap> 5612032 </td>
+                            <td nowrap> 81 </td>
+                            <td nowrap> 4066 </td>
+                            <td nowrap> 0.32 </td>
+                            <td nowrap> rgb( 1 , 255 , 176 ) </td>
+                            <td nowrap> 2552489 </td>
+                            <td nowrap> 4426437 </td>
+                            <td nowrap> 3365693 </td>
+                            <td nowrap> 3932632 </td>
+                            <td nowrap> 3031124 </td>
+                            <td nowrap> 4219294 </td>
+                            <td nowrap> 677941 </td>
+                            <td nowrap> 1889658 </td>
+                            <td nowrap> 1172708 </td>
+                            <td nowrap> 2357184 </td>
+                            <td nowrap> 4860466 </td>
+                            <td nowrap> 3992995 </td>
+                            <td nowrap> 3369493 </td>
+                            <td nowrap> 4470930 </td>
+                            <td nowrap> 3857344 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 13 </td>
+                            <td nowrap> Аруба </td>
+                            <td nowrap> 7371650 </td>
+                            <td nowrap> 69 </td>
+                            <td nowrap> 4317 </td>
+                            <td nowrap> 0.24 </td>
+                            <td nowrap> rgb( 54 , 255 , 92 ) </td>
+                            <td nowrap> 3656925 </td>
+                            <td nowrap> 2630559 </td>
+                            <td nowrap> 2305401 </td>
+                            <td nowrap> 3449089 </td>
+                            <td nowrap> 4191432 </td>
+                            <td nowrap> 1052981 </td>
+                            <td nowrap> 3469057 </td>
+                            <td nowrap> 1272987 </td>
+                            <td nowrap> 608538 </td>
+                            <td nowrap> 2460721 </td>
+                            <td nowrap> 4661410 </td>
+                            <td nowrap> 3744572 </td>
+                            <td nowrap> 1149652 </td>
+                            <td nowrap> 1350560 </td>
+                            <td nowrap> 3107101 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 14 </td>
+                            <td nowrap> Афганистан </td>
+                            <td nowrap> 8857691 </td>
+                            <td nowrap> 103 </td>
+                            <td nowrap> 3874 </td>
+                            <td nowrap> 0.74 </td>
+                            <td nowrap> rgb( 183 , 255 , 106 ) </td>
+                            <td nowrap> 2074927 </td>
+                            <td nowrap> 823463 </td>
+                            <td nowrap> 913641 </td>
+                            <td nowrap> 3426810 </td>
+                            <td nowrap> 592332 </td>
+                            <td nowrap> 2784488 </td>
+                            <td nowrap> 3399409 </td>
+                            <td nowrap> 4986211 </td>
+                            <td nowrap> 1529904 </td>
+                            <td nowrap> 4966992 </td>
+                            <td nowrap> 2143681 </td>
+                            <td nowrap> 3694984 </td>
+                            <td nowrap> 2526495 </td>
+                            <td nowrap> 3295555 </td>
+                            <td nowrap> 3159045 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 15 </td>
+                            <td nowrap> Вануату </td>
+                            <td nowrap> 9807802 </td>
+                            <td nowrap> 59 </td>
+                            <td nowrap> 2508 </td>
+                            <td nowrap> 0.36 </td>
+                            <td nowrap> rgb( 202 , 255 , 148 ) </td>
+                            <td nowrap> 3370923 </td>
+                            <td nowrap> 1854052 </td>
+                            <td nowrap> 1694471 </td>
+                            <td nowrap> 2585424 </td>
+                            <td nowrap> 746198 </td>
+                            <td nowrap> 778046 </td>
+                            <td nowrap> 1215476 </td>
+                            <td nowrap> 3226029 </td>
+                            <td nowrap> 4312924 </td>
+                            <td nowrap> 4525948 </td>
+                            <td nowrap> 3332767 </td>
+                            <td nowrap> 2584476 </td>
+                            <td nowrap> 3595985 </td>
+                            <td nowrap> 3811176 </td>
+                            <td nowrap> 1355969 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 16 </td>
+                            <td nowrap> Ватикан </td>
+                            <td nowrap> 6290018 </td>
+                            <td nowrap> 107 </td>
+                            <td nowrap> 1633 </td>
+                            <td nowrap> 0.51 </td>
+                            <td nowrap> rgb( 238 , 255 , 106 ) </td>
+                            <td nowrap> 972696 </td>
+                            <td nowrap> 4752945 </td>
+                            <td nowrap> 3643935 </td>
+                            <td nowrap> 2624623 </td>
+                            <td nowrap> 4185460 </td>
+                            <td nowrap> 994545 </td>
+                            <td nowrap> 4452833 </td>
+                            <td nowrap> 3914820 </td>
+                            <td nowrap> 2122189 </td>
+                            <td nowrap> 4566861 </td>
+                            <td nowrap> 4164257 </td>
+                            <td nowrap> 3685903 </td>
+                            <td nowrap> 3306866 </td>
+                            <td nowrap> 650063 </td>
+                            <td nowrap> 3154698 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 17 </td>
+                            <td nowrap> Великобритания </td>
+                            <td nowrap> 3258374 </td>
+                            <td nowrap> 68 </td>
+                            <td nowrap> 4835 </td>
+                            <td nowrap> 0.76 </td>
+                            <td nowrap> rgb( 9 , 255 , 181 ) </td>
+                            <td nowrap> 1486325 </td>
+                            <td nowrap> 4106443 </td>
+                            <td nowrap> 2598520 </td>
+                            <td nowrap> 2901778 </td>
+                            <td nowrap> 2739978 </td>
+                            <td nowrap> 4991436 </td>
+                            <td nowrap> 1767480 </td>
+                            <td nowrap> 3455087 </td>
+                            <td nowrap> 1800803 </td>
+                            <td nowrap> 3348472 </td>
+                            <td nowrap> 2181885 </td>
+                            <td nowrap> 4449670 </td>
+                            <td nowrap> 1300209 </td>
+                            <td nowrap> 4880319 </td>
+                            <td nowrap> 3304552 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 18 </td>
+                            <td nowrap> Венгрия </td>
+                            <td nowrap> 3246308 </td>
+                            <td nowrap> 64 </td>
+                            <td nowrap> 1519 </td>
+                            <td nowrap> 0.9 </td>
+                            <td nowrap> rgb( 177 , 255 , 31 ) </td>
+                            <td nowrap> 1325530 </td>
+                            <td nowrap> 4501027 </td>
+                            <td nowrap> 1893280 </td>
+                            <td nowrap> 1228390 </td>
+                            <td nowrap> 2923032 </td>
+                            <td nowrap> 1577557 </td>
+                            <td nowrap> 1178667 </td>
+                            <td nowrap> 2447906 </td>
+                            <td nowrap> 820798 </td>
+                            <td nowrap> 4663879 </td>
+                            <td nowrap> 1251866 </td>
+                            <td nowrap> 3640513 </td>
+                            <td nowrap> 2906141 </td>
+                            <td nowrap> 785399 </td>
+                            <td nowrap> 1024440 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 19 </td>
+                            <td nowrap> Венесуэла </td>
+                            <td nowrap> 5954836 </td>
+                            <td nowrap> 50 </td>
+                            <td nowrap> 2914 </td>
+                            <td nowrap> 0.48 </td>
+                            <td nowrap> rgb( 108 , 255 , 126 ) </td>
+                            <td nowrap> 4810980 </td>
+                            <td nowrap> 3821430 </td>
+                            <td nowrap> 3629723 </td>
+                            <td nowrap> 2492442 </td>
+                            <td nowrap> 4466342 </td>
+                            <td nowrap> 3568806 </td>
+                            <td nowrap> 3645897 </td>
+                            <td nowrap> 1221987 </td>
+                            <td nowrap> 3473840 </td>
+                            <td nowrap> 3400394 </td>
+                            <td nowrap> 4300138 </td>
+                            <td nowrap> 3705328 </td>
+                            <td nowrap> 3046242 </td>
+                            <td nowrap> 2502713 </td>
+                            <td nowrap> 2269610 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 20 </td>
+                            <td nowrap> Вьетнам </td>
+                            <td nowrap> 7367158 </td>
+                            <td nowrap> 60 </td>
+                            <td nowrap> 3233 </td>
+                            <td nowrap> 0.63 </td>
+                            <td nowrap> rgb( 33 , 255 , 226 ) </td>
+                            <td nowrap> 4554012 </td>
+                            <td nowrap> 1379130 </td>
+                            <td nowrap> 3497549 </td>
+                            <td nowrap> 3300008 </td>
+                            <td nowrap> 2680713 </td>
+                            <td nowrap> 3780538 </td>
+                            <td nowrap> 2635257 </td>
+                            <td nowrap> 1893980 </td>
+                            <td nowrap> 2037716 </td>
+                            <td nowrap> 724810 </td>
+                            <td nowrap> 4341146 </td>
+                            <td nowrap> 1641650 </td>
+                            <td nowrap> 3891633 </td>
+                            <td nowrap> 1647321 </td>
+                            <td nowrap> 2720605 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 21 </td>
+                            <td nowrap> Габон </td>
+                            <td nowrap> 6831852 </td>
+                            <td nowrap> 89 </td>
+                            <td nowrap> 265 </td>
+                            <td nowrap> 0.31 </td>
+                            <td nowrap> rgb( 123 , 255 , 190 ) </td>
+                            <td nowrap> 3796431 </td>
+                            <td nowrap> 2639572 </td>
+                            <td nowrap> 4903211 </td>
+                            <td nowrap> 4598451 </td>
+                            <td nowrap> 4425253 </td>
+                            <td nowrap> 3572586 </td>
+                            <td nowrap> 4291720 </td>
+                            <td nowrap> 2320721 </td>
+                            <td nowrap> 4066179 </td>
+                            <td nowrap> 3689600 </td>
+                            <td nowrap> 3481228 </td>
+                            <td nowrap> 1620742 </td>
+                            <td nowrap> 1980053 </td>
+                            <td nowrap> 3996615 </td>
+                            <td nowrap> 3738722 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 22 </td>
+                            <td nowrap> Гаити </td>
+                            <td nowrap> 1468592 </td>
+                            <td nowrap> 104 </td>
+                            <td nowrap> 1227 </td>
+                            <td nowrap> 0.84 </td>
+                            <td nowrap> rgb( 49 , 255 , 92 ) </td>
+                            <td nowrap> 2390659 </td>
+                            <td nowrap> 1344948 </td>
+                            <td nowrap> 4507925 </td>
+                            <td nowrap> 2277526 </td>
+                            <td nowrap> 1870433 </td>
+                            <td nowrap> 2228409 </td>
+                            <td nowrap> 3830518 </td>
+                            <td nowrap> 2635342 </td>
+                            <td nowrap> 990873 </td>
+                            <td nowrap> 1016025 </td>
+                            <td nowrap> 4540307 </td>
+                            <td nowrap> 2202990 </td>
+                            <td nowrap> 806579 </td>
+                            <td nowrap> 1697860 </td>
+                            <td nowrap> 3193683 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 23 </td>
+                            <td nowrap> Гайана </td>
+                            <td nowrap> 463912 </td>
+                            <td nowrap> 50 </td>
+                            <td nowrap> 2917 </td>
+                            <td nowrap> 0.37 </td>
+                            <td nowrap> rgb( 50 , 255 , 244 ) </td>
+                            <td nowrap> 4452487 </td>
+                            <td nowrap> 4618989 </td>
+                            <td nowrap> 1812436 </td>
+                            <td nowrap> 2347406 </td>
+                            <td nowrap> 4848844 </td>
+                            <td nowrap> 1313878 </td>
+                            <td nowrap> 3097024 </td>
+                            <td nowrap> 4574254 </td>
+                            <td nowrap> 3239448 </td>
+                            <td nowrap> 4778104 </td>
+                            <td nowrap> 3492001 </td>
+                            <td nowrap> 1292183 </td>
+                            <td nowrap> 1451689 </td>
+                            <td nowrap> 1005979 </td>
+                            <td nowrap> 4957727 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 24 </td>
+                            <td nowrap> Гамбия </td>
+                            <td nowrap> 292042 </td>
+                            <td nowrap> 108 </td>
+                            <td nowrap> 4329 </td>
+                            <td nowrap> 0.46 </td>
+                            <td nowrap> rgb( 79 , 255 , 69 ) </td>
+                            <td nowrap> 3693487 </td>
+                            <td nowrap> 2082236 </td>
+                            <td nowrap> 2122673 </td>
+                            <td nowrap> 832565 </td>
+                            <td nowrap> 1069042 </td>
+                            <td nowrap> 1847418 </td>
+                            <td nowrap> 3428554 </td>
+                            <td nowrap> 2730465 </td>
+                            <td nowrap> 4856456 </td>
+                            <td nowrap> 4890536 </td>
+                            <td nowrap> 3278699 </td>
+                            <td nowrap> 1647531 </td>
+                            <td nowrap> 1039014 </td>
+                            <td nowrap> 3933920 </td>
+                            <td nowrap> 1577255 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 25 </td>
+                            <td nowrap> Гана </td>
+                            <td nowrap> 1566449 </td>
+                            <td nowrap> 115 </td>
+                            <td nowrap> 636 </td>
+                            <td nowrap> 0.45 </td>
+                            <td nowrap> rgb( 146 , 255 , 57 ) </td>
+                            <td nowrap> 2470766 </td>
+                            <td nowrap> 2458776 </td>
+                            <td nowrap> 1085312 </td>
+                            <td nowrap> 1942541 </td>
+                            <td nowrap> 3671888 </td>
+                            <td nowrap> 1494296 </td>
+                            <td nowrap> 2929871 </td>
+                            <td nowrap> 1613347 </td>
+                            <td nowrap> 3256628 </td>
+                            <td nowrap> 3159173 </td>
+                            <td nowrap> 3877732 </td>
+                            <td nowrap> 1670802 </td>
+                            <td nowrap> 1429187 </td>
+                            <td nowrap> 750555 </td>
+                            <td nowrap> 3873242 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 26 </td>
+                            <td nowrap> Гватемала </td>
+                            <td nowrap> 1849433 </td>
+                            <td nowrap> 79 </td>
+                            <td nowrap> 1653 </td>
+                            <td nowrap> 0.39 </td>
+                            <td nowrap> rgb( 157 , 255 , 128 ) </td>
+                            <td nowrap> 3608679 </td>
+                            <td nowrap> 2353603 </td>
+                            <td nowrap> 2890852 </td>
+                            <td nowrap> 2646196 </td>
+                            <td nowrap> 2053026 </td>
+                            <td nowrap> 1856555 </td>
+                            <td nowrap> 4939402 </td>
+                            <td nowrap> 3917411 </td>
+                            <td nowrap> 1800468 </td>
+                            <td nowrap> 2474545 </td>
+                            <td nowrap> 3693269 </td>
+                            <td nowrap> 4741744 </td>
+                            <td nowrap> 2865819 </td>
+                            <td nowrap> 1742064 </td>
+                            <td nowrap> 2309671 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 27 </td>
+                            <td nowrap> Гвинея </td>
+                            <td nowrap> 1680427 </td>
+                            <td nowrap> 75 </td>
+                            <td nowrap> 2816 </td>
+                            <td nowrap> 0.39 </td>
+                            <td nowrap> rgb( 69 , 255 , 171 ) </td>
+                            <td nowrap> 1522999 </td>
+                            <td nowrap> 1421303 </td>
+                            <td nowrap> 2209417 </td>
+                            <td nowrap> 1904189 </td>
+                            <td nowrap> 4962957 </td>
+                            <td nowrap> 4414356 </td>
+                            <td nowrap> 1581784 </td>
+                            <td nowrap> 1864173 </td>
+                            <td nowrap> 1561484 </td>
+                            <td nowrap> 4118200 </td>
+                            <td nowrap> 2061303 </td>
+                            <td nowrap> 4562373 </td>
+                            <td nowrap> 941742 </td>
+                            <td nowrap> 3577752 </td>
+                            <td nowrap> 2136776 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 28 </td>
+                            <td nowrap> Германия </td>
+                            <td nowrap> 8907914 </td>
+                            <td nowrap> 68 </td>
+                            <td nowrap> 3878 </td>
+                            <td nowrap> 0.83 </td>
+                            <td nowrap> rgb( 170 , 255 , 130 ) </td>
+                            <td nowrap> 4860973 </td>
+                            <td nowrap> 1208362 </td>
+                            <td nowrap> 3666540 </td>
+                            <td nowrap> 4370880 </td>
+                            <td nowrap> 3829153 </td>
+                            <td nowrap> 1835662 </td>
+                            <td nowrap> 1478249 </td>
+                            <td nowrap> 1428586 </td>
+                            <td nowrap> 3397092 </td>
+                            <td nowrap> 2957964 </td>
+                            <td nowrap> 868875 </td>
+                            <td nowrap> 941208 </td>
+                            <td nowrap> 3329584 </td>
+                            <td nowrap> 1086919 </td>
+                            <td nowrap> 3955215 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 29 </td>
+                            <td nowrap> Гондурас </td>
+                            <td nowrap> 7938661 </td>
+                            <td nowrap> 89 </td>
+                            <td nowrap> 2744 </td>
+                            <td nowrap> 0.58 </td>
+                            <td nowrap> rgb( 224 , 255 , 2 ) </td>
+                            <td nowrap> 4218224 </td>
+                            <td nowrap> 2331273 </td>
+                            <td nowrap> 1377610 </td>
+                            <td nowrap> 3820161 </td>
+                            <td nowrap> 4798195 </td>
+                            <td nowrap> 4522430 </td>
+                            <td nowrap> 2141422 </td>
+                            <td nowrap> 3402711 </td>
+                            <td nowrap> 1138191 </td>
+                            <td nowrap> 2040109 </td>
+                            <td nowrap> 4192428 </td>
+                            <td nowrap> 1090398 </td>
+                            <td nowrap> 1524063 </td>
+                            <td nowrap> 528659 </td>
+                            <td nowrap> 2243932 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 30 </td>
+                            <td nowrap> Гонконг </td>
+                            <td nowrap> 4896139 </td>
+                            <td nowrap> 109 </td>
+                            <td nowrap> 1192 </td>
+                            <td nowrap> 0.38 </td>
+                            <td nowrap> rgb( 245 , 255 , 79 ) </td>
+                            <td nowrap> 3250884 </td>
+                            <td nowrap> 2736914 </td>
+                            <td nowrap> 2523529 </td>
+                            <td nowrap> 4312409 </td>
+                            <td nowrap> 4403607 </td>
+                            <td nowrap> 515769 </td>
+                            <td nowrap> 3054996 </td>
+                            <td nowrap> 2254832 </td>
+                            <td nowrap> 4292589 </td>
+                            <td nowrap> 4400971 </td>
+                            <td nowrap> 1952088 </td>
+                            <td nowrap> 1022183 </td>
+                            <td nowrap> 3475911 </td>
+                            <td nowrap> 2350619 </td>
+                            <td nowrap> 2210578 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 31 </td>
+                            <td nowrap> Гренада </td>
+                            <td nowrap> 4853560 </td>
+                            <td nowrap> 50 </td>
+                            <td nowrap> 2479 </td>
+                            <td nowrap> 0.74 </td>
+                            <td nowrap> rgb( 195 , 255 , 100 ) </td>
+                            <td nowrap> 4620942 </td>
+                            <td nowrap> 3148685 </td>
+                            <td nowrap> 3227638 </td>
+                            <td nowrap> 2050472 </td>
+                            <td nowrap> 2639673 </td>
+                            <td nowrap> 2094622 </td>
+                            <td nowrap> 1819521 </td>
+                            <td nowrap> 1094605 </td>
+                            <td nowrap> 2441835 </td>
+                            <td nowrap> 3595622 </td>
+                            <td nowrap> 3494746 </td>
+                            <td nowrap> 4731129 </td>
+                            <td nowrap> 879073 </td>
+                            <td nowrap> 4151929 </td>
+                            <td nowrap> 3488486 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 32 </td>
+                            <td nowrap> Греция </td>
+                            <td nowrap> 2335536 </td>
+                            <td nowrap> 80 </td>
+                            <td nowrap> 1870 </td>
+                            <td nowrap> 0.27 </td>
+                            <td nowrap> rgb( 191 , 255 , 175 ) </td>
+                            <td nowrap> 1929552 </td>
+                            <td nowrap> 652476 </td>
+                            <td nowrap> 3737187 </td>
+                            <td nowrap> 1030527 </td>
+                            <td nowrap> 2422568 </td>
+                            <td nowrap> 2309670 </td>
+                            <td nowrap> 2062534 </td>
+                            <td nowrap> 4336764 </td>
+                            <td nowrap> 589139 </td>
+                            <td nowrap> 674384 </td>
+                            <td nowrap> 2020872 </td>
+                            <td nowrap> 3855567 </td>
+                            <td nowrap> 1785812 </td>
+                            <td nowrap> 756522 </td>
+                            <td nowrap> 2556231 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 33 </td>
+                            <td nowrap> Грузия </td>
+                            <td nowrap> 1305242 </td>
+                            <td nowrap> 82 </td>
+                            <td nowrap> 2883 </td>
+                            <td nowrap> 0.5 </td>
+                            <td nowrap> rgb( 185 , 255 , 45 ) </td>
+                            <td nowrap> 1437816 </td>
+                            <td nowrap> 627026 </td>
+                            <td nowrap> 2214917 </td>
+                            <td nowrap> 2382657 </td>
+                            <td nowrap> 3343074 </td>
+                            <td nowrap> 3804631 </td>
+                            <td nowrap> 1675107 </td>
+                            <td nowrap> 3791605 </td>
+                            <td nowrap> 3570624 </td>
+                            <td nowrap> 2592479 </td>
+                            <td nowrap> 3871031 </td>
+                            <td nowrap> 1095190 </td>
+                            <td nowrap> 3596157 </td>
+                            <td nowrap> 1888426 </td>
+                            <td nowrap> 1310687 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 34 </td>
+                            <td nowrap> Израиль </td>
+                            <td nowrap> 1303653 </td>
+                            <td nowrap> 107 </td>
+                            <td nowrap> 1631 </td>
+                            <td nowrap> 0.32 </td>
+                            <td nowrap> rgb( 118 , 255 , 69 ) </td>
+                            <td nowrap> 4631243 </td>
+                            <td nowrap> 3242262 </td>
+                            <td nowrap> 2495513 </td>
+                            <td nowrap> 2866764 </td>
+                            <td nowrap> 4139694 </td>
+                            <td nowrap> 2354505 </td>
+                            <td nowrap> 985688 </td>
+                            <td nowrap> 944810 </td>
+                            <td nowrap> 2477093 </td>
+                            <td nowrap> 535712 </td>
+                            <td nowrap> 728335 </td>
+                            <td nowrap> 4716007 </td>
+                            <td nowrap> 1493646 </td>
+                            <td nowrap> 4034546 </td>
+                            <td nowrap> 839503 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 35 </td>
+                            <td nowrap> Индия </td>
+                            <td nowrap> 3234887 </td>
+                            <td nowrap> 84 </td>
+                            <td nowrap> 1271 </td>
+                            <td nowrap> 0.72 </td>
+                            <td nowrap> rgb( 58 , 255 , 216 ) </td>
+                            <td nowrap> 1763004 </td>
+                            <td nowrap> 4218243 </td>
+                            <td nowrap> 3432722 </td>
+                            <td nowrap> 4428671 </td>
+                            <td nowrap> 1755520 </td>
+                            <td nowrap> 4305061 </td>
+                            <td nowrap> 3379191 </td>
+                            <td nowrap> 2619994 </td>
+                            <td nowrap> 1201524 </td>
+                            <td nowrap> 4010449 </td>
+                            <td nowrap> 2343903 </td>
+                            <td nowrap> 967406 </td>
+                            <td nowrap> 3408358 </td>
+                            <td nowrap> 4346350 </td>
+                            <td nowrap> 4011427 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 36 </td>
+                            <td nowrap> Индонезия </td>
+                            <td nowrap> 9786060 </td>
+                            <td nowrap> 55 </td>
+                            <td nowrap> 3498 </td>
+                            <td nowrap> 0.56 </td>
+                            <td nowrap> rgb( 65 , 255 , 75 ) </td>
+                            <td nowrap> 2901523 </td>
+                            <td nowrap> 2956699 </td>
+                            <td nowrap> 578581 </td>
+                            <td nowrap> 1615279 </td>
+                            <td nowrap> 4385028 </td>
+                            <td nowrap> 643301 </td>
+                            <td nowrap> 2128060 </td>
+                            <td nowrap> 2237989 </td>
+                            <td nowrap> 2626010 </td>
+                            <td nowrap> 2781478 </td>
+                            <td nowrap> 2097185 </td>
+                            <td nowrap> 2170077 </td>
+                            <td nowrap> 2676478 </td>
+                            <td nowrap> 3125818 </td>
+                            <td nowrap> 3102009 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 37 </td>
+                            <td nowrap> Иордания </td>
+                            <td nowrap> 7211065 </td>
+                            <td nowrap> 120 </td>
+                            <td nowrap> 469 </td>
+                            <td nowrap> 0.65 </td>
+                            <td nowrap> rgb( 184 , 255 , 180 ) </td>
+                            <td nowrap> 4801974 </td>
+                            <td nowrap> 2435720 </td>
+                            <td nowrap> 4757057 </td>
+                            <td nowrap> 1360232 </td>
+                            <td nowrap> 1241336 </td>
+                            <td nowrap> 2105449 </td>
+                            <td nowrap> 2459130 </td>
+                            <td nowrap> 1540409 </td>
+                            <td nowrap> 1567754 </td>
+                            <td nowrap> 2316270 </td>
+                            <td nowrap> 2110201 </td>
+                            <td nowrap> 1308942 </td>
+                            <td nowrap> 4062449 </td>
+                            <td nowrap> 4834353 </td>
+                            <td nowrap> 4387150 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 38 </td>
+                            <td nowrap> Ирак </td>
+                            <td nowrap> 2149643 </td>
+                            <td nowrap> 67 </td>
+                            <td nowrap> 3733 </td>
+                            <td nowrap> 0.48 </td>
+                            <td nowrap> rgb( 239 , 255 , 96 ) </td>
+                            <td nowrap> 2388071 </td>
+                            <td nowrap> 3757819 </td>
+                            <td nowrap> 1448527 </td>
+                            <td nowrap> 2407662 </td>
+                            <td nowrap> 4529250 </td>
+                            <td nowrap> 4418786 </td>
+                            <td nowrap> 3083514 </td>
+                            <td nowrap> 1884214 </td>
+                            <td nowrap> 1870109 </td>
+                            <td nowrap> 3179487 </td>
+                            <td nowrap> 1373514 </td>
+                            <td nowrap> 4431139 </td>
+                            <td nowrap> 3966108 </td>
+                            <td nowrap> 3727982 </td>
+                            <td nowrap> 2725462 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 39 </td>
+                            <td nowrap> Иран </td>
+                            <td nowrap> 5720034 </td>
+                            <td nowrap> 102 </td>
+                            <td nowrap> 3481 </td>
+                            <td nowrap> 0.56 </td>
+                            <td nowrap> rgb( 104 , 255 , 32 ) </td>
+                            <td nowrap> 1664720 </td>
+                            <td nowrap> 2976938 </td>
+                            <td nowrap> 2655321 </td>
+                            <td nowrap> 3342063 </td>
+                            <td nowrap> 1817216 </td>
+                            <td nowrap> 2246156 </td>
+                            <td nowrap> 4995940 </td>
+                            <td nowrap> 508284 </td>
+                            <td nowrap> 2763280 </td>
+                            <td nowrap> 3298454 </td>
+                            <td nowrap> 3241622 </td>
+                            <td nowrap> 1373819 </td>
+                            <td nowrap> 1568137 </td>
+                            <td nowrap> 4556725 </td>
+                            <td nowrap> 1962529 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 40 </td>
+                            <td nowrap> Ирландия </td>
+                            <td nowrap> 6698800 </td>
+                            <td nowrap> 112 </td>
+                            <td nowrap> 281 </td>
+                            <td nowrap> 0.46 </td>
+                            <td nowrap> rgb( 18 , 255 , 173 ) </td>
+                            <td nowrap> 3413127 </td>
+                            <td nowrap> 1398972 </td>
+                            <td nowrap> 4916307 </td>
+                            <td nowrap> 2644137 </td>
+                            <td nowrap> 3194760 </td>
+                            <td nowrap> 1213529 </td>
+                            <td nowrap> 869057 </td>
+                            <td nowrap> 1266082 </td>
+                            <td nowrap> 1616132 </td>
+                            <td nowrap> 1896791 </td>
+                            <td nowrap> 3719522 </td>
+                            <td nowrap> 880050 </td>
+                            <td nowrap> 2985764 </td>
+                            <td nowrap> 811232 </td>
+                            <td nowrap> 3700886 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 41 </td>
+                            <td nowrap> Исландия </td>
+                            <td nowrap> 9779481 </td>
+                            <td nowrap> 59 </td>
+                            <td nowrap> 1945 </td>
+                            <td nowrap> 0.72 </td>
+                            <td nowrap> rgb( 216 , 255 , 44 ) </td>
+                            <td nowrap> 2880873 </td>
+                            <td nowrap> 3230976 </td>
+                            <td nowrap> 2094680 </td>
+                            <td nowrap> 767003 </td>
+                            <td nowrap> 2914780 </td>
+                            <td nowrap> 2319400 </td>
+                            <td nowrap> 587477 </td>
+                            <td nowrap> 829313 </td>
+                            <td nowrap> 1484339 </td>
+                            <td nowrap> 3327884 </td>
+                            <td nowrap> 3298648 </td>
+                            <td nowrap> 2755230 </td>
+                            <td nowrap> 4352429 </td>
+                            <td nowrap> 4471770 </td>
+                            <td nowrap> 2799337 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 42 </td>
+                            <td nowrap> Испания </td>
+                            <td nowrap> 4405271 </td>
+                            <td nowrap> 74 </td>
+                            <td nowrap> 2938 </td>
+                            <td nowrap> 0.45 </td>
+                            <td nowrap> rgb( 51 , 255 , 136 ) </td>
+                            <td nowrap> 1249650 </td>
+                            <td nowrap> 4791519 </td>
+                            <td nowrap> 619571 </td>
+                            <td nowrap> 1187253 </td>
+                            <td nowrap> 1876360 </td>
+                            <td nowrap> 2966725 </td>
+                            <td nowrap> 4779786 </td>
+                            <td nowrap> 925073 </td>
+                            <td nowrap> 1031628 </td>
+                            <td nowrap> 2968887 </td>
+                            <td nowrap> 3511730 </td>
+                            <td nowrap> 1372229 </td>
+                            <td nowrap> 3461321 </td>
+                            <td nowrap> 4500077 </td>
+                            <td nowrap> 3645603 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 43 </td>
+                            <td nowrap> Италия </td>
+                            <td nowrap> 5596695 </td>
+                            <td nowrap> 67 </td>
+                            <td nowrap> 1445 </td>
+                            <td nowrap> 0.77 </td>
+                            <td nowrap> rgb( 211 , 255 , 34 ) </td>
+                            <td nowrap> 1182881 </td>
+                            <td nowrap> 3472249 </td>
+                            <td nowrap> 3118495 </td>
+                            <td nowrap> 2414846 </td>
+                            <td nowrap> 2074050 </td>
+                            <td nowrap> 4498840 </td>
+                            <td nowrap> 774084 </td>
+                            <td nowrap> 3465433 </td>
+                            <td nowrap> 636027 </td>
+                            <td nowrap> 620773 </td>
+                            <td nowrap> 3559154 </td>
+                            <td nowrap> 1749446 </td>
+                            <td nowrap> 1832629 </td>
+                            <td nowrap> 2232839 </td>
+                            <td nowrap> 3576602 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 44 </td>
+                            <td nowrap> Казахстан </td>
+                            <td nowrap> 4799655 </td>
+                            <td nowrap> 69 </td>
+                            <td nowrap> 2359 </td>
+                            <td nowrap> 0.51 </td>
+                            <td nowrap> rgb( 149 , 255 , 101 ) </td>
+                            <td nowrap> 633173 </td>
+                            <td nowrap> 1835535 </td>
+                            <td nowrap> 1813614 </td>
+                            <td nowrap> 640215 </td>
+                            <td nowrap> 2789231 </td>
+                            <td nowrap> 4315115 </td>
+                            <td nowrap> 4854972 </td>
+                            <td nowrap> 3055208 </td>
+                            <td nowrap> 902184 </td>
+                            <td nowrap> 1918389 </td>
+                            <td nowrap> 1305380 </td>
+                            <td nowrap> 3352604 </td>
+                            <td nowrap> 641494 </td>
+                            <td nowrap> 2327976 </td>
+                            <td nowrap> 1575632 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 45 </td>
+                            <td nowrap> Камбоджа </td>
+                            <td nowrap> 742446 </td>
+                            <td nowrap> 76 </td>
+                            <td nowrap> 773 </td>
+                            <td nowrap> 0.39 </td>
+                            <td nowrap> rgb( 34 , 255 , 108 ) </td>
+                            <td nowrap> 1547688 </td>
+                            <td nowrap> 4137418 </td>
+                            <td nowrap> 2621213 </td>
+                            <td nowrap> 3637518 </td>
+                            <td nowrap> 3813610 </td>
+                            <td nowrap> 3956474 </td>
+                            <td nowrap> 1758779 </td>
+                            <td nowrap> 1643395 </td>
+                            <td nowrap> 2980848 </td>
+                            <td nowrap> 2668789 </td>
+                            <td nowrap> 949214 </td>
+                            <td nowrap> 4937445 </td>
+                            <td nowrap> 1291393 </td>
+                            <td nowrap> 4183671 </td>
+                            <td nowrap> 514897 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 46 </td>
+                            <td nowrap> Камерун </td>
+                            <td nowrap> 3873780 </td>
+                            <td nowrap> 61 </td>
+                            <td nowrap> 4327 </td>
+                            <td nowrap> 0.85 </td>
+                            <td nowrap> rgb( 46 , 255 , 100 ) </td>
+                            <td nowrap> 4841374 </td>
+                            <td nowrap> 2804775 </td>
+                            <td nowrap> 4664030 </td>
+                            <td nowrap> 2789072 </td>
+                            <td nowrap> 2927323 </td>
+                            <td nowrap> 4748509 </td>
+                            <td nowrap> 3298325 </td>
+                            <td nowrap> 1906716 </td>
+                            <td nowrap> 2436931 </td>
+                            <td nowrap> 1491081 </td>
+                            <td nowrap> 4664628 </td>
+                            <td nowrap> 4363736 </td>
+                            <td nowrap> 2011453 </td>
+                            <td nowrap> 2160446 </td>
+                            <td nowrap> 4941509 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 47 </td>
+                            <td nowrap> Канада </td>
+                            <td nowrap> 9286267 </td>
+                            <td nowrap> 106 </td>
+                            <td nowrap> 482 </td>
+                            <td nowrap> 0.68 </td>
+                            <td nowrap> rgb( 92 , 255 , 19 ) </td>
+                            <td nowrap> 2585200 </td>
+                            <td nowrap> 3340884 </td>
+                            <td nowrap> 3520343 </td>
+                            <td nowrap> 2797400 </td>
+                            <td nowrap> 3949197 </td>
+                            <td nowrap> 2570574 </td>
+                            <td nowrap> 773095 </td>
+                            <td nowrap> 3065510 </td>
+                            <td nowrap> 4962454 </td>
+                            <td nowrap> 1183356 </td>
+                            <td nowrap> 597925 </td>
+                            <td nowrap> 1427453 </td>
+                            <td nowrap> 3087441 </td>
+                            <td nowrap> 794633 </td>
+                            <td nowrap> 4702527 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 48 </td>
+                            <td nowrap> Катар </td>
+                            <td nowrap> 4457851 </td>
+                            <td nowrap> 78 </td>
+                            <td nowrap> 725 </td>
+                            <td nowrap> 0.83 </td>
+                            <td nowrap> rgb( 81 , 255 , 17 ) </td>
+                            <td nowrap> 1180666 </td>
+                            <td nowrap> 4481577 </td>
+                            <td nowrap> 3741137 </td>
+                            <td nowrap> 1200957 </td>
+                            <td nowrap> 4846981 </td>
+                            <td nowrap> 4945943 </td>
+                            <td nowrap> 2668272 </td>
+                            <td nowrap> 4710553 </td>
+                            <td nowrap> 1787590 </td>
+                            <td nowrap> 2659381 </td>
+                            <td nowrap> 4881405 </td>
+                            <td nowrap> 565776 </td>
+                            <td nowrap> 882603 </td>
+                            <td nowrap> 1817647 </td>
+                            <td nowrap> 3301824 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 49 </td>
+                            <td nowrap> Кения </td>
+                            <td nowrap> 5586265 </td>
+                            <td nowrap> 107 </td>
+                            <td nowrap> 1247 </td>
+                            <td nowrap> 0.46 </td>
+                            <td nowrap> rgb( 204 , 255 , 66 ) </td>
+                            <td nowrap> 1729605 </td>
+                            <td nowrap> 2607801 </td>
+                            <td nowrap> 886435 </td>
+                            <td nowrap> 1562795 </td>
+                            <td nowrap> 2077092 </td>
+                            <td nowrap> 2543055 </td>
+                            <td nowrap> 1985337 </td>
+                            <td nowrap> 1554481 </td>
+                            <td nowrap> 851057 </td>
+                            <td nowrap> 2080358 </td>
+                            <td nowrap> 4197168 </td>
+                            <td nowrap> 4543751 </td>
+                            <td nowrap> 2831318 </td>
+                            <td nowrap> 2256921 </td>
+                            <td nowrap> 3446076 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 50 </td>
+                            <td nowrap> Кипр </td>
+                            <td nowrap> 5281355 </td>
+                            <td nowrap> 92 </td>
+                            <td nowrap> 1892 </td>
+                            <td nowrap> 0.2 </td>
+                            <td nowrap> rgb( 173 , 255 , 246 ) </td>
+                            <td nowrap> 2383421 </td>
+                            <td nowrap> 1970235 </td>
+                            <td nowrap> 1507849 </td>
+                            <td nowrap> 1532201 </td>
+                            <td nowrap> 1906953 </td>
+                            <td nowrap> 1075946 </td>
+                            <td nowrap> 3247159 </td>
+                            <td nowrap> 2046281 </td>
+                            <td nowrap> 1607501 </td>
+                            <td nowrap> 541449 </td>
+                            <td nowrap> 1104043 </td>
+                            <td nowrap> 2935690 </td>
+                            <td nowrap> 2600491 </td>
+                            <td nowrap> 778479 </td>
+                            <td nowrap> 3693686 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 51 </td>
+                            <td nowrap> Киргизия </td>
+                            <td nowrap> 5311027 </td>
+                            <td nowrap> 119 </td>
+                            <td nowrap> 4422 </td>
+                            <td nowrap> 0.51 </td>
+                            <td nowrap> rgb( 197 , 255 , 78 ) </td>
+                            <td nowrap> 699276 </td>
+                            <td nowrap> 682301 </td>
+                            <td nowrap> 3456763 </td>
+                            <td nowrap> 2365391 </td>
+                            <td nowrap> 3194056 </td>
+                            <td nowrap> 1647765 </td>
+                            <td nowrap> 3467175 </td>
+                            <td nowrap> 4153247 </td>
+                            <td nowrap> 1163531 </td>
+                            <td nowrap> 548934 </td>
+                            <td nowrap> 873195 </td>
+                            <td nowrap> 3223292 </td>
+                            <td nowrap> 2402860 </td>
+                            <td nowrap> 2779973 </td>
+                            <td nowrap> 816257 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 52 </td>
+                            <td nowrap> Кирибати </td>
+                            <td nowrap> 3576868 </td>
+                            <td nowrap> 73 </td>
+                            <td nowrap> 1078 </td>
+                            <td nowrap> 0.75 </td>
+                            <td nowrap> rgb( 186 , 255 , 22 ) </td>
+                            <td nowrap> 2096403 </td>
+                            <td nowrap> 3927966 </td>
+                            <td nowrap> 2337198 </td>
+                            <td nowrap> 4653765 </td>
+                            <td nowrap> 1024025 </td>
+                            <td nowrap> 3063076 </td>
+                            <td nowrap> 4963909 </td>
+                            <td nowrap> 628364 </td>
+                            <td nowrap> 3860200 </td>
+                            <td nowrap> 4272128 </td>
+                            <td nowrap> 1886789 </td>
+                            <td nowrap> 911445 </td>
+                            <td nowrap> 626694 </td>
+                            <td nowrap> 879146 </td>
+                            <td nowrap> 4430116 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 53 </td>
+                            <td nowrap> Китай </td>
+                            <td nowrap> 5415460 </td>
+                            <td nowrap> 118 </td>
+                            <td nowrap> 3543 </td>
+                            <td nowrap> 0.33 </td>
+                            <td nowrap> rgb( 38 , 255 , 219 ) </td>
+                            <td nowrap> 4872118 </td>
+                            <td nowrap> 632741 </td>
+                            <td nowrap> 4636191 </td>
+                            <td nowrap> 1438894 </td>
+                            <td nowrap> 2932737 </td>
+                            <td nowrap> 3347119 </td>
+                            <td nowrap> 2682550 </td>
+                            <td nowrap> 1483935 </td>
+                            <td nowrap> 1776711 </td>
+                            <td nowrap> 2608968 </td>
+                            <td nowrap> 1132839 </td>
+                            <td nowrap> 4189048 </td>
+                            <td nowrap> 4728098 </td>
+                            <td nowrap> 954305 </td>
+                            <td nowrap> 2457049 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 54 </td>
+                            <td nowrap> Колумбия </td>
+                            <td nowrap> 9055677 </td>
+                            <td nowrap> 85 </td>
+                            <td nowrap> 3963 </td>
+                            <td nowrap> 0.71 </td>
+                            <td nowrap> rgb( 252 , 255 , 161 ) </td>
+                            <td nowrap> 2962042 </td>
+                            <td nowrap> 1807960 </td>
+                            <td nowrap> 4068232 </td>
+                            <td nowrap> 4508792 </td>
+                            <td nowrap> 4850911 </td>
+                            <td nowrap> 2352214 </td>
+                            <td nowrap> 1846638 </td>
+                            <td nowrap> 2274500 </td>
+                            <td nowrap> 696139 </td>
+                            <td nowrap> 2610837 </td>
+                            <td nowrap> 1567250 </td>
+                            <td nowrap> 2129548 </td>
+                            <td nowrap> 4900047 </td>
+                            <td nowrap> 4597149 </td>
+                            <td nowrap> 2001607 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 55 </td>
+                            <td nowrap> Конго </td>
+                            <td nowrap> 2473253 </td>
+                            <td nowrap> 50 </td>
+                            <td nowrap> 3789 </td>
+                            <td nowrap> 0.48 </td>
+                            <td nowrap> rgb( 135 , 255 , 139 ) </td>
+                            <td nowrap> 2357419 </td>
+                            <td nowrap> 3592213 </td>
+                            <td nowrap> 1938798 </td>
+                            <td nowrap> 4732231 </td>
+                            <td nowrap> 1753157 </td>
+                            <td nowrap> 3633866 </td>
+                            <td nowrap> 2552177 </td>
+                            <td nowrap> 3695704 </td>
+                            <td nowrap> 4082432 </td>
+                            <td nowrap> 675229 </td>
+                            <td nowrap> 1403798 </td>
+                            <td nowrap> 2241144 </td>
+                            <td nowrap> 3753724 </td>
+                            <td nowrap> 1906509 </td>
+                            <td nowrap> 1948149 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 56 </td>
+                            <td nowrap> Китай </td>
+                            <td nowrap> 8195979 </td>
+                            <td nowrap> 97 </td>
+                            <td nowrap> 490 </td>
+                            <td nowrap> 0.79 </td>
+                            <td nowrap> rgb( 66 , 255 , 42 ) </td>
+                            <td nowrap> 2182472 </td>
+                            <td nowrap> 860555 </td>
+                            <td nowrap> 596291 </td>
+                            <td nowrap> 676020 </td>
+                            <td nowrap> 1682724 </td>
+                            <td nowrap> 4161409 </td>
+                            <td nowrap> 2501799 </td>
+                            <td nowrap> 2620329 </td>
+                            <td nowrap> 920894 </td>
+                            <td nowrap> 4768628 </td>
+                            <td nowrap> 4837546 </td>
+                            <td nowrap> 4060657 </td>
+                            <td nowrap> 2422690 </td>
+                            <td nowrap> 4963816 </td>
+                            <td nowrap> 4969262 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 57 </td>
+                            <td nowrap> Корея </td>
+                            <td nowrap> 6429397 </td>
+                            <td nowrap> 94 </td>
+                            <td nowrap> 996 </td>
+                            <td nowrap> 0.65 </td>
+                            <td nowrap> rgb( 21 , 255 , 213 ) </td>
+                            <td nowrap> 2269718 </td>
+                            <td nowrap> 3239107 </td>
+                            <td nowrap> 1052257 </td>
+                            <td nowrap> 3323719 </td>
+                            <td nowrap> 3395433 </td>
+                            <td nowrap> 2669738 </td>
+                            <td nowrap> 1595055 </td>
+                            <td nowrap> 3589950 </td>
+                            <td nowrap> 4487030 </td>
+                            <td nowrap> 1330940 </td>
+                            <td nowrap> 662270 </td>
+                            <td nowrap> 2964278 </td>
+                            <td nowrap> 1910157 </td>
+                            <td nowrap> 4800686 </td>
+                            <td nowrap> 3398757 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 58 </td>
+                            <td nowrap> Ивуар </td>
+                            <td nowrap> 407838 </td>
+                            <td nowrap> 74 </td>
+                            <td nowrap> 4084 </td>
+                            <td nowrap> 0.64 </td>
+                            <td nowrap> rgb( 173 , 255 , 163 ) </td>
+                            <td nowrap> 4938278 </td>
+                            <td nowrap> 1814590 </td>
+                            <td nowrap> 4037270 </td>
+                            <td nowrap> 3066154 </td>
+                            <td nowrap> 4351510 </td>
+                            <td nowrap> 1519618 </td>
+                            <td nowrap> 3934217 </td>
+                            <td nowrap> 1741672 </td>
+                            <td nowrap> 2519033 </td>
+                            <td nowrap> 3730114 </td>
+                            <td nowrap> 3291276 </td>
+                            <td nowrap> 3496555 </td>
+                            <td nowrap> 2964349 </td>
+                            <td nowrap> 1956118 </td>
+                            <td nowrap> 2158411 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 59 </td>
+                            <td nowrap> Куба </td>
+                            <td nowrap> 1264911 </td>
+                            <td nowrap> 97 </td>
+                            <td nowrap> 1365 </td>
+                            <td nowrap> 0.86 </td>
+                            <td nowrap> rgb( 179 , 255 , 164 ) </td>
+                            <td nowrap> 4104005 </td>
+                            <td nowrap> 3715453 </td>
+                            <td nowrap> 1109650 </td>
+                            <td nowrap> 4012846 </td>
+                            <td nowrap> 2247633 </td>
+                            <td nowrap> 855225 </td>
+                            <td nowrap> 1511092 </td>
+                            <td nowrap> 766539 </td>
+                            <td nowrap> 1530406 </td>
+                            <td nowrap> 1907532 </td>
+                            <td nowrap> 4536784 </td>
+                            <td nowrap> 3505070 </td>
+                            <td nowrap> 1157343 </td>
+                            <td nowrap> 4150756 </td>
+                            <td nowrap> 4225839 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 60 </td>
+                            <td nowrap> Кувейт </td>
+                            <td nowrap> 6091965 </td>
+                            <td nowrap> 93 </td>
+                            <td nowrap> 4589 </td>
+                            <td nowrap> 0.5 </td>
+                            <td nowrap> rgb( 146 , 255 , 71 ) </td>
+                            <td nowrap> 2201655 </td>
+                            <td nowrap> 1729390 </td>
+                            <td nowrap> 4716567 </td>
+                            <td nowrap> 3735165 </td>
+                            <td nowrap> 2363690 </td>
+                            <td nowrap> 2347686 </td>
+                            <td nowrap> 1084463 </td>
+                            <td nowrap> 2921875 </td>
+                            <td nowrap> 1136402 </td>
+                            <td nowrap> 584244 </td>
+                            <td nowrap> 3676955 </td>
+                            <td nowrap> 4028148 </td>
+                            <td nowrap> 2202141 </td>
+                            <td nowrap> 882658 </td>
+                            <td nowrap> 3141854 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 61 </td>
+                            <td nowrap> Кюрасао </td>
+                            <td nowrap> 4694073 </td>
+                            <td nowrap> 106 </td>
+                            <td nowrap> 2233 </td>
+                            <td nowrap> 0.56 </td>
+                            <td nowrap> rgb( 36 , 255 , 43 ) </td>
+                            <td nowrap> 3538171 </td>
+                            <td nowrap> 1583219 </td>
+                            <td nowrap> 510135 </td>
+                            <td nowrap> 3798412 </td>
+                            <td nowrap> 642420 </td>
+                            <td nowrap> 3146962 </td>
+                            <td nowrap> 4706379 </td>
+                            <td nowrap> 2492041 </td>
+                            <td nowrap> 3904792 </td>
+                            <td nowrap> 2686263 </td>
+                            <td nowrap> 2433156 </td>
+                            <td nowrap> 916748 </td>
+                            <td nowrap> 908153 </td>
+                            <td nowrap> 2395592 </td>
+                            <td nowrap> 4365919 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 62 </td>
+                            <td nowrap> Таджикистан </td>
+                            <td nowrap> 7997239 </td>
+                            <td nowrap> 115 </td>
+                            <td nowrap> 2921 </td>
+                            <td nowrap> 0.29 </td>
+                            <td nowrap> rgb( 79 , 255 , 160 ) </td>
+                            <td nowrap> 4954388 </td>
+                            <td nowrap> 3637979 </td>
+                            <td nowrap> 1208263 </td>
+                            <td nowrap> 2106155 </td>
+                            <td nowrap> 2098016 </td>
+                            <td nowrap> 4908675 </td>
+                            <td nowrap> 2592041 </td>
+                            <td nowrap> 908541 </td>
+                            <td nowrap> 653931 </td>
+                            <td nowrap> 2112288 </td>
+                            <td nowrap> 2154729 </td>
+                            <td nowrap> 2350411 </td>
+                            <td nowrap> 1583368 </td>
+                            <td nowrap> 1310177 </td>
+                            <td nowrap> 656367 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 63 </td>
+                            <td nowrap> Таиланд </td>
+                            <td nowrap> 3938334 </td>
+                            <td nowrap> 108 </td>
+                            <td nowrap> 4105 </td>
+                            <td nowrap> 0.42 </td>
+                            <td nowrap> rgb( 59 , 255 , 169 ) </td>
+                            <td nowrap> 1447163 </td>
+                            <td nowrap> 3532567 </td>
+                            <td nowrap> 3038345 </td>
+                            <td nowrap> 4553824 </td>
+                            <td nowrap> 4960191 </td>
+                            <td nowrap> 4817298 </td>
+                            <td nowrap> 4833338 </td>
+                            <td nowrap> 1951530 </td>
+                            <td nowrap> 4397939 </td>
+                            <td nowrap> 1479998 </td>
+                            <td nowrap> 4248632 </td>
+                            <td nowrap> 3603209 </td>
+                            <td nowrap> 1184733 </td>
+                            <td nowrap> 4589014 </td>
+                            <td nowrap> 4487107 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 64 </td>
+                            <td nowrap> Танзания </td>
+                            <td nowrap> 2186290 </td>
+                            <td nowrap> 112 </td>
+                            <td nowrap> 2621 </td>
+                            <td nowrap> 0.94 </td>
+                            <td nowrap> rgb( 223 , 255 , 207 ) </td>
+                            <td nowrap> 2829473 </td>
+                            <td nowrap> 4193124 </td>
+                            <td nowrap> 3243670 </td>
+                            <td nowrap> 4080819 </td>
+                            <td nowrap> 2608621 </td>
+                            <td nowrap> 3098307 </td>
+                            <td nowrap> 1216933 </td>
+                            <td nowrap> 1695813 </td>
+                            <td nowrap> 1161694 </td>
+                            <td nowrap> 2700734 </td>
+                            <td nowrap> 4064910 </td>
+                            <td nowrap> 4095161 </td>
+                            <td nowrap> 2061143 </td>
+                            <td nowrap> 4822140 </td>
+                            <td nowrap> 1035325 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 65 </td>
+                            <td nowrap> Того </td>
+                            <td nowrap> 2833282 </td>
+                            <td nowrap> 111 </td>
+                            <td nowrap> 3057 </td>
+                            <td nowrap> 0.36 </td>
+                            <td nowrap> rgb( 200 , 255 , 46 ) </td>
+                            <td nowrap> 3795555 </td>
+                            <td nowrap> 1083449 </td>
+                            <td nowrap> 4638451 </td>
+                            <td nowrap> 3633648 </td>
+                            <td nowrap> 759117 </td>
+                            <td nowrap> 1777285 </td>
+                            <td nowrap> 3713725 </td>
+                            <td nowrap> 3497229 </td>
+                            <td nowrap> 4346388 </td>
+                            <td nowrap> 681033 </td>
+                            <td nowrap> 624591 </td>
+                            <td nowrap> 926168 </td>
+                            <td nowrap> 1472873 </td>
+                            <td nowrap> 2897685 </td>
+                            <td nowrap> 2519814 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 66 </td>
+                            <td nowrap> Токелау </td>
+                            <td nowrap> 9361965 </td>
+                            <td nowrap> 72 </td>
+                            <td nowrap> 2658 </td>
+                            <td nowrap> 0.4 </td>
+                            <td nowrap> rgb( 245 , 255 , 18 ) </td>
+                            <td nowrap> 2991750 </td>
+                            <td nowrap> 2805320 </td>
+                            <td nowrap> 3437615 </td>
+                            <td nowrap> 4920654 </td>
+                            <td nowrap> 931296 </td>
+                            <td nowrap> 1770416 </td>
+                            <td nowrap> 3250415 </td>
+                            <td nowrap> 2714698 </td>
+                            <td nowrap> 3213583 </td>
+                            <td nowrap> 4801685 </td>
+                            <td nowrap> 3009265 </td>
+                            <td nowrap> 1381350 </td>
+                            <td nowrap> 1327762 </td>
+                            <td nowrap> 551857 </td>
+                            <td nowrap> 4792731 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 67 </td>
+                            <td nowrap> Тонга </td>
+                            <td nowrap> 6664745 </td>
+                            <td nowrap> 99 </td>
+                            <td nowrap> 1071 </td>
+                            <td nowrap> 0.52 </td>
+                            <td nowrap> rgb( 155 , 255 , 177 ) </td>
+                            <td nowrap> 2793379 </td>
+                            <td nowrap> 4597885 </td>
+                            <td nowrap> 4533286 </td>
+                            <td nowrap> 1984663 </td>
+                            <td nowrap> 1437699 </td>
+                            <td nowrap> 845619 </td>
+                            <td nowrap> 3805803 </td>
+                            <td nowrap> 3073731 </td>
+                            <td nowrap> 2277665 </td>
+                            <td nowrap> 1486304 </td>
+                            <td nowrap> 1475789 </td>
+                            <td nowrap> 753368 </td>
+                            <td nowrap> 1277649 </td>
+                            <td nowrap> 2115669 </td>
+                            <td nowrap> 3791522 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 68 </td>
+                            <td nowrap> Тувалу </td>
+                            <td nowrap> 2202588 </td>
+                            <td nowrap> 71 </td>
+                            <td nowrap> 4281 </td>
+                            <td nowrap> 0.25 </td>
+                            <td nowrap> rgb( 180 , 255 , 210 ) </td>
+                            <td nowrap> 4116547 </td>
+                            <td nowrap> 3295603 </td>
+                            <td nowrap> 1701942 </td>
+                            <td nowrap> 2837477 </td>
+                            <td nowrap> 2605420 </td>
+                            <td nowrap> 3900882 </td>
+                            <td nowrap> 1390150 </td>
+                            <td nowrap> 1787827 </td>
+                            <td nowrap> 4810697 </td>
+                            <td nowrap> 4754069 </td>
+                            <td nowrap> 3658465 </td>
+                            <td nowrap> 4490650 </td>
+                            <td nowrap> 529749 </td>
+                            <td nowrap> 2662287 </td>
+                            <td nowrap> 4681422 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 69 </td>
+                            <td nowrap> Тунис </td>
+                            <td nowrap> 5387760 </td>
+                            <td nowrap> 93 </td>
+                            <td nowrap> 1415 </td>
+                            <td nowrap> 0.31 </td>
+                            <td nowrap> rgb( 82 , 255 , 53 ) </td>
+                            <td nowrap> 4395246 </td>
+                            <td nowrap> 3454985 </td>
+                            <td nowrap> 4542901 </td>
+                            <td nowrap> 3799834 </td>
+                            <td nowrap> 1197802 </td>
+                            <td nowrap> 1407105 </td>
+                            <td nowrap> 4882454 </td>
+                            <td nowrap> 799449 </td>
+                            <td nowrap> 1219295 </td>
+                            <td nowrap> 1546506 </td>
+                            <td nowrap> 2608435 </td>
+                            <td nowrap> 3912650 </td>
+                            <td nowrap> 2402947 </td>
+                            <td nowrap> 731345 </td>
+                            <td nowrap> 3334480 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 70 </td>
+                            <td nowrap> Туркменистан </td>
+                            <td nowrap> 6737109 </td>
+                            <td nowrap> 103 </td>
+                            <td nowrap> 4585 </td>
+                            <td nowrap> 0.73 </td>
+                            <td nowrap> rgb( 182 , 255 , 163 ) </td>
+                            <td nowrap> 2629671 </td>
+                            <td nowrap> 2619500 </td>
+                            <td nowrap> 505249 </td>
+                            <td nowrap> 3110886 </td>
+                            <td nowrap> 1232161 </td>
+                            <td nowrap> 1324341 </td>
+                            <td nowrap> 2627121 </td>
+                            <td nowrap> 2110501 </td>
+                            <td nowrap> 1779405 </td>
+                            <td nowrap> 3980770 </td>
+                            <td nowrap> 3804268 </td>
+                            <td nowrap> 4134704 </td>
+                            <td nowrap> 2299188 </td>
+                            <td nowrap> 2808373 </td>
+                            <td nowrap> 4241512 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 71 </td>
+                            <td nowrap> Турция </td>
+                            <td nowrap> 1773134 </td>
+                            <td nowrap> 116 </td>
+                            <td nowrap> 750 </td>
+                            <td nowrap> 0.57 </td>
+                            <td nowrap> rgb( 210 , 255 , 196 ) </td>
+                            <td nowrap> 3866241 </td>
+                            <td nowrap> 1753310 </td>
+                            <td nowrap> 1572426 </td>
+                            <td nowrap> 2531734 </td>
+                            <td nowrap> 4675141 </td>
+                            <td nowrap> 1496223 </td>
+                            <td nowrap> 4721323 </td>
+                            <td nowrap> 4425921 </td>
+                            <td nowrap> 2239591 </td>
+                            <td nowrap> 2416578 </td>
+                            <td nowrap> 1612604 </td>
+                            <td nowrap> 2976742 </td>
+                            <td nowrap> 3091706 </td>
+                            <td nowrap> 1622036 </td>
+                            <td nowrap> 2956490 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 72 </td>
+                            <td nowrap> Швейцария </td>
+                            <td nowrap> 4334741 </td>
+                            <td nowrap> 100 </td>
+                            <td nowrap> 97 </td>
+                            <td nowrap> 0.5 </td>
+                            <td nowrap> rgb( 11 , 255 , 246 ) </td>
+                            <td nowrap> 1060449 </td>
+                            <td nowrap> 4856348 </td>
+                            <td nowrap> 3181176 </td>
+                            <td nowrap> 1483133 </td>
+                            <td nowrap> 2734653 </td>
+                            <td nowrap> 4514836 </td>
+                            <td nowrap> 4012835 </td>
+                            <td nowrap> 1341988 </td>
+                            <td nowrap> 2994466 </td>
+                            <td nowrap> 1174273 </td>
+                            <td nowrap> 1728572 </td>
+                            <td nowrap> 3025109 </td>
+                            <td nowrap> 2622704 </td>
+                            <td nowrap> 2327549 </td>
+                            <td nowrap> 3429890 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 73 </td>
+                            <td nowrap> Швеция </td>
+                            <td nowrap> 7463726 </td>
+                            <td nowrap> 58 </td>
+                            <td nowrap> 1871 </td>
+                            <td nowrap> 0.74 </td>
+                            <td nowrap> rgb( 44 , 255 , 152 ) </td>
+                            <td nowrap> 1274934 </td>
+                            <td nowrap> 3605534 </td>
+                            <td nowrap> 4406950 </td>
+                            <td nowrap> 774638 </td>
+                            <td nowrap> 806805 </td>
+                            <td nowrap> 1459443 </td>
+                            <td nowrap> 1790122 </td>
+                            <td nowrap> 4718066 </td>
+                            <td nowrap> 3782141 </td>
+                            <td nowrap> 2925679 </td>
+                            <td nowrap> 4837390 </td>
+                            <td nowrap> 2642516 </td>
+                            <td nowrap> 1465927 </td>
+                            <td nowrap> 4232217 </td>
+                            <td nowrap> 2757728 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 74 </td>
+                            <td nowrap> Ямайка </td>
+                            <td nowrap> 5049656 </td>
+                            <td nowrap> 50 </td>
+                            <td nowrap> 1518 </td>
+                            <td nowrap> 0.9 </td>
+                            <td nowrap> rgb( 39 , 255 , 244 ) </td>
+                            <td nowrap> 3990938 </td>
+                            <td nowrap> 4864924 </td>
+                            <td nowrap> 3008168 </td>
+                            <td nowrap> 3539757 </td>
+                            <td nowrap> 4104330 </td>
+                            <td nowrap> 4871118 </td>
+                            <td nowrap> 3745195 </td>
+                            <td nowrap> 757405 </td>
+                            <td nowrap> 1334126 </td>
+                            <td nowrap> 4492267 </td>
+                            <td nowrap> 2499672 </td>
+                            <td nowrap> 2709874 </td>
+                            <td nowrap> 608674 </td>
+                            <td nowrap> 2725653 </td>
+                            <td nowrap> 3279880 </td>
+                            </tr>
+                            <tr>
+                            <td nowrap> 75 </td>
+                            <td nowrap> Япония </td>
+                            <td nowrap> 9043960 </td>
+                            <td nowrap> 78 </td>
+                            <td nowrap> 750 </td>
+                            <td nowrap> 0.25 </td>
+                            <td nowrap> rgb( 185 , 255 , 211 ) </td>
+                            <td nowrap> 4336316 </td>
+                            <td nowrap> 3123701 </td>
+                            <td nowrap> 4899709 </td>
+                            <td nowrap> 3948000 </td>
+                            <td nowrap> 972424 </td>
+                            <td nowrap> 4133200 </td>
+                            <td nowrap> 2796075 </td>
+                            <td nowrap> 1482165 </td>
+                            <td nowrap> 3811866 </td>
+                            <td nowrap> 1618655 </td>
+                            <td nowrap> 1053264 </td>
+                            <td nowrap> 732332 </td>
+                            <td nowrap> 1724608 </td>
+                            <td nowrap> 1521991 </td>
+                            <td nowrap> 2454891 </td>
+                            </tr>
+                    </tbody> 
+                </table>
+            
+        </details>
+
+        
+    </body>
+</html>
+
