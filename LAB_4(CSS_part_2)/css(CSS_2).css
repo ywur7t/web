@@ -87,11 +87,12 @@ div.text-blocks img{
     height: 10%;
 }
 div.text-blocks__header{
-    font-size:1.8vw;
+    font-size:1.8rem;
 }
 div.text-blocks__text-lines{
     line-height: 95%;
-    margin:5% 0 0 0;
+    font-size:1.2rem;
+    /* margin:5% 0 0 0; */
 }
 .text-blocks__block1, .text-blocks__block2,.text-blocks__block3,.text-blocks__block4{
     text-align: center;
@@ -109,7 +110,7 @@ div.content{
     margin: 0 0 5vw;
 }
 div.footer{
-    height: vw;
+    height: auto;
     background-color: #808080;    
 }
 div.footer div.person{
@@ -130,24 +131,25 @@ body{
 
 @media(max-width:800px){
     div.navigation{
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: 10vh 1fr;
-        row-gap: 0.5vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
     }
     div.navigation span{
-        text-align: center;
-        padding-top:3vh;
-        grid-column:1/3;
-        grid-row:1/2;
+        display: none;
+            /* grid-column:1/3;
+            grid-row:1/2; */
         
     }
     div.navigation div.navigation__items{
-        opacity: 0;
+        /* opacity: 0; */
+        text-align: center;
         grid-column:1/3;
         grid-row:2/3;
-        height:0;
+        /* height:0; */
+        /* grid-template-columns: repeat(2,1fr);
+        grid-template-rows:repeat(2,1fr); */
     }
-    div.navigation div.navigation__items:hover{
+    /* div.navigation div.navigation__items:hover{
         opacity: 1;
         height:auto;
         display: grid;
@@ -157,11 +159,11 @@ body{
         grid-row:2/3;
         grid-template-columns: repeat(2,1fr);
         grid-template-rows:repeat(2,1fr);
-    }
+    } */
     
     div.pictures{
         grid-template-columns:1fr;
-        grid-template-rows:repeat(4,10vh);
+        grid-template-rows:repeat(4,auto);
         row-gap: 0.3vh;
         grid-template-areas:
         "pictures__left"
@@ -183,13 +185,13 @@ body{
     }
     div.text-blocks{
         grid-template-columns: 1fr;
-        grid-template-rows:repeat(4, 1fr);
+        grid-template-rows:repeat(4, auto);
         grid-template-areas:
         "text-blocks__block1"
         "text-blocks__block2"
         "text-blocks__block3"
         "text-blocks__block4";
-        margin: 0.5% 15%;
+        /* margin: 0.5% 15%; */
     }
     div.text-blocks__text-lines{
         margin:0;
@@ -201,8 +203,18 @@ body{
         height:1vh;
     }
     .text-blocks__block1, .text-blocks__block2,.text-blocks__block3,.text-blocks__block4{
-        margin: 1% 0%;
+        margin: 0.5% 0%;
         
+    }
+    
+    div.text-blocks__header{
+        font-size:2rem;
+    }
+    div.text-blocks__text-lines{
+        line-height: 95%;
+        
+        font-size:1.5rem;
+    /* margin:5% 0 0 0; */
     }
 }
 
