@@ -1,0 +1,175 @@
+grid_item_location(rowst, rowen, colst, calc)
+    grid-row rowst/rowen
+    grid-column  colst/calc
+
+image_resize(width, height)
+    width  width
+    height  height
+
+block_atributes()
+    text-align  center
+    background-color  #FFFAFA
+    height fit-content
+    font-size 1vw
+    padding-bottom 1%
+    box-sizing border-box
+
+footer_item()
+    font-size 1.5vw
+    padding  0.5% 1%
+
+
+
+.content
+    padding  0 15vmax
+    margin-bottom  5vw
+
+    header
+        width 100%
+        display  grid
+        grid-template-columns  1fr 2fr
+        grid-template-rows  repeat(2, 1fr)
+        
+        span
+            padding  10%
+            grid_item_location(1,3,1,2)    
+            background-color  #D3D3D3
+            font-size 2.5vw
+
+        nav
+            grid_item_location(2,3,2,3)  
+            background-color  #D3D3D3
+            text-align  right
+            padding 1%
+
+            a
+                font-size  2vw
+                text-decoration  none
+                margin  1% 4%
+                padding  0.1% 1%
+                color black
+
+                &:hover
+                &.active
+                    background-color  #808080
+                    color #FFFF00
+
+    .images
+        margin  0.2vw 0
+        display  grid
+        column-gap  0.1vw
+        row-gap  0.1vw
+        grid-template-columns  repeat(2, 1fr)
+        grid-template-rows  repeat(3, 4.8vw)
+       
+        img
+           image_resize(100%, 100%)
+        
+        .pictures__left
+            grid_item_location(1,4,1,2)
+
+        .pictures__topright
+            grid_item_location(1,2,2,3)
+
+        .pictures__midright
+            grid_item_location(2,3,2,3)
+
+        .pictures__downright
+            grid_item_location(3,4,2,3)
+
+    .textarea
+        display  grid
+        grid-template-columns  repeat(4,1fr)
+        grid-template-rows  1fr
+        column-gap  1%
+
+        img
+            image_resize(20%, 20%)
+        header
+            font-size 1.8rem
+        text
+            line-height  95%
+            font-size 1.2rem
+        
+        .text-blocks__block1
+            grid_item_location(1, 2, 1, 2)
+            block_atributes()
+        .text-blocks__block2
+            grid_item_location(1, 2, 2, 3)
+            block_atributes()
+        .text-blocks__block3
+            block_atributes()
+            grid_item_location(1, 2, 3, 4)
+            block_atributes()
+        .text-blocks__block4
+            grid_item_location(1, 2, 4, 5)
+            block_atributes()
+
+footer
+    background-color #808080    
+    text-align  right;
+
+    .person
+        footer_item()
+        float left
+    .contact
+        footer_item()
+
+
+@media(max-width 800px)
+    .content
+        padding 0
+        margin-bottom 2vw
+        header
+            grid-template-columns  1fr
+            grid-template-rows  1fr
+
+            span
+                display none
+
+            nav
+                text-align center
+                grid_item_location(2,3,1,3)
+
+        .images
+            grid-template-columns 1fr
+            grid-template-rows repeat(4,auto)
+            row-gap  0.3vh
+
+            .pictures__left
+                grid_item_location(1,2,1,2)
+            .pictures__topright
+                grid_item_location(2,3,1,2)
+            .pictures__middleleft
+                grid_item_location(3,4,1,2)
+            .pictures__downleft
+                grid_item_location(4,5,1,2)
+
+        .textarea
+            grid-template-columns 1fr
+            grid-template-rows repeat(4, auto)
+
+            .text-blocks__text-lines
+                margin 0
+                text-align center
+                line-height 95%
+                font-size 1.5rem
+            .text-blocks__logo
+                padding 2% 0 0
+                image_resize(10%,10%)
+
+            .text-blocks__header
+                font-size 2rem;
+
+            .text-blocks__block1
+                grid_item_location(1,2,1,2)
+                margin 0.5% 0%;
+            .text-blocks__block2
+                grid_item_location(2,3,1,2)
+                margin 0.5% 0%;
+            .text-blocks__block3
+                grid_item_location(3,4,1,2)
+                margin 0.5% 0%;
+            .text-blocks__block4
+                grid_item_location(5,6,1,2)
+                margin 0.5% 0%;

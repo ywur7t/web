@@ -1,0 +1,50 @@
+doctype html 
+block variables 
+    - var Menu={'Silverfall':'main.html','Caverns':'mmain.html','Lake':'lmain.html'}
+    - var blockText=[{'index':'text-blocks__block1','image' : 'image_5.jpg','header':'Twilight Grove', 'text':'Загадочное и волшебное место, наполненное древними деревьями и извилистыми тропами. Это большая естественная коллекция деревьев, состоящая из нескольких видов деревьев, которая существует как единая экосистема. Дом для бесчисленного множества видов растений и животных, создавая сложную сеть жизни. Это убежищем для биоразнообразия и резервуаром генетического разнообразия, защищая целостность глобального генофонда.'},{'index':'text-blocks__block2','image' : 'image_5.jpg','header':'Vantablackia Belladonnaia', 'text':'Этот уникальный цветок представляет собой редкое и красивое зрелище с его угольно-черными лепестками и странной, почти потусторонней формой. Его цвет контрастирует с пышной зеленью окрестностей, напоминая о более темном и скрытном мире. Веток хранит в себе мистическую силу и опасную тайну, которую необходимо охранять. В любом случае, оно обязательно привлечет внимание и любопытство тех, кто его увидит. Его красота настолько заманчива, что невозможно удержаться и не сорвать его. Название подразумевает, что цветок красив, но опасен, Загадочный цветок раскрывается только ночью.'},{'index':'text-blocks__block3','image' : 'image_5.jpg','header':'Caverns', 'text':'В этом названии подчеркивается сверкающая красота крисллических образований, а также ощущение тьмы и тайны. Оно могло бы описать место, где свет изо всех сил пытается проникнуть во тьму, но где кристаллические образования помогают указать путь. Тайна и красота этого места создают ощущение приключений и опасности, поскольку никогда не знаешь, что скрывается за каждым углом. Будь то могущественное существо или давно потерянное сокровище, Кристальные Пещеры Тени, безусловно, будут незабываемым и захватывающим местом.'},{'index':'text-blocks__block4','image' : 'image_5.jpg','header':'Silverfall', 'text':'Silverfall – величественный и живописный водопад, расположенный в отдаленном и красивом регионе. Когда солнце, сияющее сквозь деревья, сверкает от падающей воды, кажется, будто весь водопад сделан из серебра, переливающегося и сияющего в солнечных лучах. Звук плещущейся воды безмятежен, создавая умиротворяющую атмосферу, идеальную для медитации и размышлений. Стать свидетелем этого великолепного зрелища — значит увидеть красоту и силу природы во всей ее красе'}]
+    - var n = 0
+    - var title='Twilight Grove'
+    - var imageList={'pictures__left':'image_5.jpg','pictures__topright':'image_5.jpg','pictures__middleleft':'image_5.jpg','pictures__downleft':'image_5.jpg'}
+    - var fLeft='ⓒ Мартын В.А., Б9121-09.03.04(1), 2023-2024'
+    - var fRight='✉Контакты'
+
+
+mixin createMenu(Menu,active)
+    each value,key in Menu  
+        if active ==key
+            a.active(href=value)=key
+        else 
+            a(href=value)=key
+
+mixin createImages(imageList)
+    each item,index in imageList
+        img(class=index src=item)
+        
+mixin createTextBlock(item)
+    div(class=item.index)
+        img(src=item.image class='text-blocks__logo')
+        div(class='text-blocks__header')= item.header 
+        div(class='text-blocks__text-lines')= item.text
+
+
+html(lang="ru")
+    head 
+        title #{title}
+        link(rel="stylesheet", href="main.css")
+    body 
+        div.content
+            header 
+                span=title 
+                nav 
+                    +createMenu(Menu,'Silverfall')
+
+            div.images
+                +createImages(imageList)
+
+            div.textarea
+                each item in blockText
+                    +createTextBlock(item)
+            
+        footer 
+            div(class='person')=fLeft
+            div(class='contact')=fRight
