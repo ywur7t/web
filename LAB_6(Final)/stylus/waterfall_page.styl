@@ -1,0 +1,41 @@
+@import template
+
+
+
+
+.description_block
+    background-color: rgba(0,0,0,0.3)
+    padding-bottom 1%
+    .header_sticky
+        text-align: center
+        position sticky
+        inset 8%
+
+        .header
+            SET_FONT_STYLE(900, 1.5vw, 4vw, 'Roboto Slab', none, #fff)
+            background-color: rgba(0,0,0,0.8)
+            z-index 5
+
+    
+    img.far
+        position: relative
+        z-index -1
+        width 100vw
+        height auto
+    div.text
+        SET_FONT_STYLE(400, normal, 1.2vw, 'Noto Serif Display', none, #fff)
+        margin 1% 5% 1% 5%
+        text-align: justify
+        background-color: rgba(0,0,0,0.5)
+        padding 1%
+
+
+@media(max-width 600px)
+    .description_block
+        .header_sticky
+            .header
+                font-size 2rem
+
+        div.text
+            font-size 1.4rem
+            text-align: left

@@ -1,0 +1,176 @@
+@import template
+
+SET_IMAGE(iw,ih)
+    width iw
+    height ih
+
+
+.content__images
+    white-space nowrap
+    overflow-y hidden
+    overflow-x scroll
+    height:auto;
+    width:100vw;
+    background-color: #fff;
+    
+    &::-webkit-scrollbar 
+        display none
+
+    .content__images__item
+        width:inherit
+        height:inherit
+        display: inline-block
+        position relative
+        text-align: center
+        
+        a.image
+            display:inline-block
+            position absolute
+
+            img
+                SET_IMAGE(100%, 100%)
+                position relative
+ 
+        span
+            position relative
+            display: inline-block
+            width:inherit
+            margin-top 50%
+            pointer-events: none;
+            SET_FONT_STYLE(900, normal, 3vw, 'Roboto Slab', none, #fff)
+
+            
+
+
+
+.content__forest_description
+    
+    .description_block
+        margin: 1% 5%
+        CREATE_GRID_TEMPLATE(1fr, 2fr 3fr, #fff)//rgba(229,229,229,0.6)
+        column-gap 1%
+        img
+            grid-row: 1/2
+            grid-column 1/2
+            width 100%
+            height:auto
+            position: sticky
+            float left
+            top 17%
+            
+        div
+            SET_FONT_STYLE(400, normal, 1.5vw, 'Noto Serif Display', none, #000)
+            grid-row:1/2
+            grid-column: 2/3
+            background-color: rgba(229,229,229,1)
+            margin:0.5%
+            padding: 2%
+    .header
+        text-align: center
+        SET_FONT_STYLE(900, normal, 3vw, 'Roboto Slab', none, #000)
+        position sticky
+        padding-top:3.5vw;
+        inset 0
+        z-index 3
+        
+        
+        background-color: #fff
+
+.content__flower_description
+    
+    .description_block
+        CREATE_GRID_TEMPLATE(1fr, 2fr 1fr, rgba(229,229,229,0.6))
+        margin: 1% 5%
+        column-gap 1%
+        img
+            grid-row: 1/2
+            grid-column 2/3
+            width 100%
+            height:auto
+            position: sticky
+            float right
+            top 17%
+        div
+            SET_FONT_STYLE(400, normal, 1.5vw, 'Noto Serif Display', none, #000)
+            grid-row:1/2
+            grid-column: 1/2
+            background-color: rgba(229,229,229,1)
+            margin:0.5%
+            padding: 2%
+
+    .header
+        text-align: center
+        SET_FONT_STYLE(900, normal, 3vw, 'Roboto Slab', none, #000)
+        position sticky
+        padding-top:3.8vw;
+        inset 0
+        z-index 3
+        background-color: #fff
+
+
+//
+
+@media(max-width: 600px)
+    .content__images
+       .content__images__item
+            span
+                SET_FONT_STYLE(400, normal, 1.5rem, 'Roboto Slab', none, #fff)
+
+    .content__forest_description
+        position: relative
+        display block
+        .header
+            position: relative
+            SET_FONT_STYLE(400, normal, 1.5rem, 'Roboto Slab', none, #000)
+
+        .description_block
+            display block
+            margin 0
+            position: relative
+
+            img
+                position: relative
+                display block
+                margin 0
+                z-index 1
+                top 0
+
+            div
+                position relative
+                display block
+                margin 0
+                opacity 0.7
+                background-color: #000
+                
+                SET_FONT_STYLE(400, normal, 1rem, 'Noto Serif Display', none, #fff)
+    
+        
+    .content__flower_description
+        position: relative
+        display block
+        .header
+            position: relative
+            SET_FONT_STYLE(400, normal, 1.5rem, 'Roboto Slab', none, #000)
+
+        .description_block
+            display block
+            margin 0
+            position: relative
+
+            img
+                position: relative
+                display block
+                margin 0
+                z-index 1
+                top 0
+                //SET_IMAGE(auto,auto)
+
+            div
+                position relative
+                display block
+                margin 0
+                opacity 0.7
+                background-color: #000
+                
+                SET_FONT_STYLE(400, normal, 1rem, 'Noto Serif Display', none, #fff)
+    

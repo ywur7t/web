@@ -1,0 +1,201 @@
+@import template
+
+
+SET_DETAILS()
+    summary
+        SET_FONT_STYLE(400, normal, 1.5vw, 'Roboto Slab', none, #000)
+
+
+
+
+.descriprion
+    CREATE_GRID_TEMPLATE(1fr, 3fr 2fr, #F5EBE1)
+    padding 2%
+    margin 0 5%
+
+    .text
+        SET_FONT_STYLE(400, normal, 1.5vw, 'Times new roman', none, #482E19)
+        margin 0 2%
+        grid-column 1/2
+        grid-row 1/2
+
+    img
+        position: sticky
+        width 100%
+        height auto
+        top 10%
+        grid-column 2/3
+        grid-row 1/2
+ 
+details.graph
+    SET_DETAILS()
+    margin 0 20% 0 5%
+    padding 1%
+    form
+        margin 0 20% 0 5%
+        padding 1%
+        CREATE_GRID_TEMPLATE(1fr, repeat(2,auto), inherit)
+        column-gap: 1vw
+        
+        .ox
+            background-color: #F5EBE1
+            padding 1%
+            div.text
+                SET_FONT_STYLE(900, normal, 1.8vw, 'Times new roman', none, #482E19)//rgba(255,255,255,0.9)
+                border-bottom 0.5vh solid #482E19//#fff
+                
+            
+            input
+            label
+                SET_FONT_STYLE(400, normal, 1.5vw, 'Times new roman', none, #482E19)//rgba(255,255,255,0.9)
+                
+
+        .oy
+            padding 1%
+            background-color: #482E19
+            div.text
+                SET_FONT_STYLE(900, normal, 1.8vw, 'Times new roman', none, #F5EBE1)
+                border-bottom 0.5vh solid #F5EBE1
+                
+            input
+            label
+                SET_FONT_STYLE(400, normal, 1.5vw, 'Times new roman', none, #F5EBE1)
+        
+        // input[type='button']            
+            
+        //     SET_FONT_STYLE(400, normal, 1vw, 'Times new roman', none, #482E19)
+        //     margin:auto
+            
+details.sort
+    SET_DETAILS()
+    margin 0 20% 0 5%
+    padding 1%
+    form
+        margin 0 20% 0 5%
+        padding 1%
+        background-color: #F5EBE1
+        column-gap: 1vw
+
+        div.block
+            SET_FONT_STYLE(400, normal, 1.5vw, 'Times new roman', none, #482E19)
+
+            input
+            label 
+                SET_FONT_STYLE(400, normal, 1.5vw, 'Times new roman', none, #482E19)
+
+        
+details.filt
+    SET_DETAILS()
+    margin 0 20% 0 5%
+    padding 1%
+    form
+        margin 0 20% 0 5%
+        padding 1%
+        background-color: #F5EBE1
+        column-gap: 1vw
+        SET_FONT_STYLE(400, normal, 1.5vw, 'Times new roman', none, #482E19)
+
+
+details.tab 
+    SET_DETAILS()
+    margin 0 0 0 5%
+    padding 1%
+
+    table
+    th
+    td
+        border 1px solid
+
+    
+
+    table
+        margin 0 0 0 5%
+        padding 1%
+        background-color: #482E19
+        column-gap: 1vw
+        border 2px solid
+        border-radius: 10px;
+        border-collapse: collapse;
+        
+        SET_FONT_STYLE(400, normal, 1.5vw, 'Times new roman', none, #F5EBE1)
+
+        thead
+            background-color: #482E19
+            color #F5EBE1
+        tbody
+            text-align: center
+            tr
+                &:nth-child(odd)
+                    background-color #F5EBE1;//F5EBE1
+                    color #40485b
+
+                    &:hover
+                        background-color #40b2aa;
+                        color #fff
+
+                &:nth-child(even)
+                    background-color #e2cdbc;//40485b//#D2B69E//d8d8d8
+                    color #40485b
+
+                    &:hover
+                        background-color #40b2aa;
+                        color #fff
+            
+
+@media(max-width:600px)
+    .descriprion
+        .text
+            SET_FONT_STYLE(400, normal, 1rem, 'Times new roman', none, #482E19)
+
+    details.graph
+        margin 0 0 0 5%
+        summary
+            SET_FONT_STYLE(400, normal, 1.5rem, 'Roboto Slab', none, #000)
+
+        form
+            margin 0 0 0 -5%
+            div.ox
+                .text
+                input
+                label
+                    font-size 1.4rem
+            div.oy
+                .text
+                input
+                label
+                    font-size 1.4rem
+    
+    details.sort
+        margin 0 0 0 5%
+        summary
+            SET_FONT_STYLE(400, normal, 1.5rem, 'Roboto Slab', none, #000)
+        form
+            margin 0 0 0 -5%
+            div.block 
+                label
+                    font-size 1.4rem
+    details.filt
+        margin 0 0 0 5%
+        summary
+            SET_FONT_STYLE(400, normal, 1.5rem, 'Roboto Slab', none, #000)
+        form
+            margin 0 0 0 -5%
+            div.block 
+                label
+                    font-size 1.4rem
+
+
+
+
+
+    details.tab
+        
+        margin 0 0 0 5%
+        summary
+            SET_FONT_STYLE(400, normal, 1.5rem, 'Roboto Slab', none, #000)
+        div.scrolltable
+            overflow-y hidden
+            overflow-x scroll
+            
+            table
+                font-size 1.4rem
