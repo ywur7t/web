@@ -1,0 +1,797 @@
+<!DOCTYPE html >
+<html lang="ru">
+  <head>       
+    <meta charset="utf-8"/>
+    <title>Table</title>
+    <link rel="stylesheet" href="../css/table_page.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@1,600&amp;display=swap" rel="stylesheet"/>
+    <link rel="shortcut icon" href="./IMAGE/icon/icon.ico" type="image/x-icon"/>
+  </head>
+  <body> 
+    <div class="content">
+      <div class="content__navigation">
+        <div class="content__navigation__left">
+          <div class="content__navigation__left__dismenu">☰
+            <div class="content__navigation__left__dismenu__hiddenmenu"><a href="table_page.html">Распределение</a><a href="waterfall_page.html">Silverfall</a><a href="plants_page.html">Plants</a><a href="cave_page.html">Caves</a><a href="fort_page.html">Fortress</a><a href="lake_page.html">Lake</a>
+            </div>
+          </div><a href="main_page.html">Twilight Grove</a>
+        </div>
+        <div class="content__navigation__right"><a href="table_page.html">Распределение</a><a href="waterfall_page.html">Silverfall</a><a href="plants_page.html">Plants</a><a href="cave_page.html">Caves</a><a href="fort_page.html">Fortress</a><a href="lake_page.html">Lake</a>
+        </div>
+      </div>
+      <div class="content__descriprion">
+        <div class="content__descriprion__text">Уничтожение лесов и других лесных массивов часто происходит, из-за вырубки леса для сельскохозяйственных, городских или других целей землепользования. Негативные последствия вырубки лесов включают потерю биоразнообразия, увеличение выбросов парниковых газов, уменьшение количества местных осадков и снижение способности лесов регулировать климат и поддерживать экосистемы. Необходимо признавать важность лесов и их сохранение. Усилия по сохранению могут помочь предотвратить экологические последствия вырубки и поддержать существование и развитие. <br/><span>Сохранение также может помочь снизить риск исчезновения растений и животных, а также помочь защитить культурное наследие. Уничтожение лесов, оказывает пагубное влияние на животных и птиц, которые называют эту среду обитания своим домом. Многие виды живут в ветвях, гнездах и норах деревьев. Когда леса вырубаются, животные и птицы теряют свои дома и вынуждены перемещаться, адаптироваться или умирать. Если эта среда обитания будет уничтожена, то же самое произойдет и со сложной экосистемой, которая развивалась на протяжении сотен или тысяч лет. Уничтожая леса и места их обитания, мы уничтожаем жизненно важный аспект биоразнообразия нашей планеты, который необхдим для здорового существования.</span></div><img src="../IMAGE/demage/demage.png"/>
+      </div>
+      <details class="content__graph">
+        <summary>График</summary>
+        <form>
+          <div class="content__graph__ox">
+            <div class="text">Ось Ox</div>
+            <input type="radio" name="x" id="region"/>
+            <label for="region">Регион</label><br/>
+            <input type="radio" name="x" id="classtype"/>
+            <label for="classtype">Класс</label><br/>
+            <input type="radio" name="x" id="purpose"/>
+            <label for="purpose">Целевое назначение</label>
+          </div>
+          <div class="content__graph__oy">
+            <div class="text">Ось Oy</div>
+            <input type="radio" name="y" id="minprise"/>
+            <label for="minprise">Минимальная стоимость</label><br/>
+            <input type="radio" name="y" id="maxprise"/>
+            <label for="maxprise">Максимальная стоимость</label><br/>
+            <input type="radio" name="y" id="minndvi"/>
+            <label for="minndvi">Минимальный NDVI</label><br/>
+            <input type="radio" name="y" id="maxndvi"/>
+            <label for="maxndvi">Максимальный NDVI</label><br/>
+            <input type="radio" name="y" id="count"/>
+            <label for="count">Количество</label>
+          </div>
+        </form>
+      </details>
+      <details class="content__sort">
+        <summary>Сортировка</summary>
+        <form>
+          <div class="content__sort__block">
+            <select>
+              <option>NONE</option>
+              <option>Регион</option>
+              <option>Возраст</option>
+            </select>
+            <input type="checkbox" name="order" id="oredr"/>
+            <label for="oredr">max→min</label>
+          </div>
+          <div class="content__sort__block">
+            <select>
+              <option>NONE</option>
+              <option>Стоимость</option>
+              <option>Бонитет</option>
+              <option>NDVI</option>
+            </select>
+            <input type="checkbox" name="choose" id="choose"/>
+            <label for="choose">max→min</label>
+          </div>
+          <div class="content__sort__block">
+            <select>
+              <option>NONE</option>
+              <option>Класс</option>
+              <option>Высота</option>
+              <option>Целевое назначение</option>
+            </select>
+            <input type="checkbox" name="choose" id="third"/>
+            <label for="third">max→min</label>
+          </div>
+        </form>
+      </details>
+      <details class="content__filter">
+        <summary>Фильтр</summary>
+        <form>
+          <div class="content__filter__block">
+            <label>Регион: </label>
+            <input type="text"/>
+          </div>
+          <div class="content__filter__block">
+            <label>Стоимость: от</label>
+            <input type="number"/>
+            <label> до</label>
+            <input type="number"/>
+          </div>
+          <div class="content__filter__block">
+            <label>Высота: от</label>
+            <input type="number"/>
+            <label> до</label>
+            <input type="number"/>
+          </div>
+          <div class="content__filter__block">
+            <label>Возраст: от</label>
+            <input type="text"/>
+            <label> до</label>
+            <input type="text"/>
+          </div>
+          <div class="content__filter__block">
+            <label>NDVI: от</label>
+            <input type="text"/>
+            <label> до</label>
+            <input type="text"/>
+          </div>
+          <div class="content__filter__block">
+            <label>Бонитет: от</label>
+            <input type="text"/>
+            <label> до</label>
+            <input type="text"/>
+          </div>
+          <div class="content__filter__block">
+            <label>Целевое назначение: </label>
+            <input type="text"/>
+          </div>
+        </form>
+      </details>
+      <details class="content__tab">
+        <summary>Распределение лесов</summary>
+        <div class="content__tab__scrolltable">
+          <table>  
+            <thead>  
+              <tr> 
+                <th>#</th>
+                <th>Регион</th>
+                <th>Стоимость</th>
+                <th>Класс</th>
+                <th>Бонитет</th>
+                <th>Cредняя высота</th>
+                <th>NDVI</th>
+                <th>Cредний возраст</th>
+                <th>Целевое назначение</th>
+              </tr>
+            </thead>
+            <tbody> 
+              <tr> 
+                <td>1</td>
+                <td>Ирландия</td>
+                <td>1645584</td>
+                <td>крупно-лиственные</td>
+                <td>38</td>
+                <td>279</td>
+                <td>0.21907</td>
+                <td>78</td>
+                <td>эксплуатируемый</td>
+              </tr>
+              <tr> 
+                <td>2</td>
+                <td>Гватемала</td>
+                <td>2444810</td>
+                <td>мелко-лиственные</td>
+                <td>76</td>
+                <td>705</td>
+                <td>0.88812</td>
+                <td>146</td>
+                <td>резервный</td>
+              </tr>
+              <tr> 
+                <td>3</td>
+                <td>Ватикан</td>
+                <td>1318156</td>
+                <td>светло-хвойные</td>
+                <td>27</td>
+                <td>200</td>
+                <td>0.15538</td>
+                <td>268</td>
+                <td>резервный</td>
+              </tr>
+              <tr> 
+                <td>4</td>
+                <td>Ботсвана</td>
+                <td>117404</td>
+                <td>светло-хвойные</td>
+                <td>94</td>
+                <td>140</td>
+                <td>0.12044</td>
+                <td>70</td>
+                <td>эксплуатируемый</td>
+              </tr>
+              <tr> 
+                <td>5</td>
+                <td>Австралия</td>
+                <td>1498082</td>
+                <td>крупно-лиственные</td>
+                <td>71</td>
+                <td>725</td>
+                <td>0.18441</td>
+                <td>279</td>
+                <td>резервный</td>
+              </tr>
+              <tr> 
+                <td>6</td>
+                <td>Бразилия</td>
+                <td>2622313</td>
+                <td>светло-хвойные</td>
+                <td>31</td>
+                <td>990</td>
+                <td>0.05843</td>
+                <td>209</td>
+                <td>резервный</td>
+              </tr>
+              <tr> 
+                <td>7</td>
+                <td>Гренада</td>
+                <td>270751</td>
+                <td>крупно-лиственные</td>
+                <td>26</td>
+                <td>303</td>
+                <td>0.93954</td>
+                <td>92</td>
+                <td>резервный</td>
+              </tr>
+              <tr> 
+                <td>8</td>
+                <td>Венесуэла</td>
+                <td>2545627</td>
+                <td>крупно-лиственные</td>
+                <td>17</td>
+                <td>445</td>
+                <td>0.66756</td>
+                <td>154</td>
+                <td>резервный</td>
+              </tr>
+              <tr> 
+                <td>9</td>
+                <td>Гамбия</td>
+                <td>609820</td>
+                <td>мелко-лиственные</td>
+                <td>95</td>
+                <td>477</td>
+                <td>0.42431</td>
+                <td>254</td>
+                <td>резервный</td>
+              </tr>
+              <tr> 
+                <td>10</td>
+                <td>Алжир</td>
+                <td>2854780</td>
+                <td>светло-хвойные</td>
+                <td>47</td>
+                <td>403</td>
+                <td>0.82131</td>
+                <td>154</td>
+                <td>резервный</td>
+              </tr>
+              <tr> 
+                <td>11</td>
+                <td>Габон</td>
+                <td>776516</td>
+                <td>крупно-лиственные</td>
+                <td>83</td>
+                <td>475</td>
+                <td>0.59823</td>
+                <td>110</td>
+                <td>защитный</td>
+              </tr>
+              <tr> 
+                <td>12</td>
+                <td>Афганистан</td>
+                <td>1122971</td>
+                <td>крупно-лиственные</td>
+                <td>50</td>
+                <td>720</td>
+                <td>0.12207</td>
+                <td>190</td>
+                <td>эксплуатируемый</td>
+              </tr>
+              <tr> 
+                <td>13</td>
+                <td>Аруба</td>
+                <td>2426201</td>
+                <td>темно-хвойные</td>
+                <td>46</td>
+                <td>134</td>
+                <td>0.79148</td>
+                <td>215</td>
+                <td>эксплуатируемый</td>
+              </tr>
+              <tr> 
+                <td>14</td>
+                <td>Абхазия</td>
+                <td>2828513</td>
+                <td>крупно-лиственные</td>
+                <td>54</td>
+                <td>405</td>
+                <td>0.89284</td>
+                <td>131</td>
+                <td>защитный</td>
+              </tr>
+              <tr> 
+                <td>15</td>
+                <td>Аргентина</td>
+                <td>2221706</td>
+                <td>крупно-лиственные</td>
+                <td>51</td>
+                <td>282</td>
+                <td>0.33415</td>
+                <td>129</td>
+                <td>резервный</td>
+              </tr>
+              <tr> 
+                <td>16</td>
+                <td>Индия</td>
+                <td>557504</td>
+                <td>мелко-лиственные</td>
+                <td>78</td>
+                <td>222</td>
+                <td>0.41112</td>
+                <td>296</td>
+                <td>резервный</td>
+              </tr>
+              <tr> 
+                <td>17</td>
+                <td>Аруба</td>
+                <td>2575740</td>
+                <td>крупно-лиственные</td>
+                <td>62</td>
+                <td>891</td>
+                <td>0.94028</td>
+                <td>198</td>
+                <td>защитный</td>
+              </tr>
+              <tr> 
+                <td>18</td>
+                <td>Габон</td>
+                <td>138070</td>
+                <td>мелко-лиственные</td>
+                <td>39</td>
+                <td>687</td>
+                <td>0.08482</td>
+                <td>210</td>
+                <td>защитный</td>
+              </tr>
+              <tr> 
+                <td>19</td>
+                <td>Израиль</td>
+                <td>2176515</td>
+                <td>темно-хвойные</td>
+                <td>3</td>
+                <td>544</td>
+                <td>0.88423</td>
+                <td>269</td>
+                <td>эксплуатируемый</td>
+              </tr>
+              <tr> 
+                <td>20</td>
+                <td>Алжир</td>
+                <td>1407380</td>
+                <td>светло-хвойные</td>
+                <td>88</td>
+                <td>104</td>
+                <td>0.20055</td>
+                <td>272</td>
+                <td>резервный</td>
+              </tr>
+              <tr> 
+                <td>21</td>
+                <td>Вьетнам</td>
+                <td>2543869</td>
+                <td>крупно-лиственные</td>
+                <td>36</td>
+                <td>693</td>
+                <td>0.30884</td>
+                <td>275</td>
+                <td>защитный</td>
+              </tr>
+              <tr> 
+                <td>22</td>
+                <td>Австрия</td>
+                <td>1665240</td>
+                <td>светло-хвойные</td>
+                <td>55</td>
+                <td>583</td>
+                <td>0.70665</td>
+                <td>256</td>
+                <td>эксплуатируемый</td>
+              </tr>
+              <tr> 
+                <td>23</td>
+                <td>Ватикан</td>
+                <td>1769630</td>
+                <td>крупно-лиственные</td>
+                <td>33</td>
+                <td>199</td>
+                <td>0.60329</td>
+                <td>165</td>
+                <td>резервный</td>
+              </tr>
+              <tr> 
+                <td>24</td>
+                <td>Германия</td>
+                <td>1544170</td>
+                <td>темно-хвойные</td>
+                <td>44</td>
+                <td>544</td>
+                <td>0.26593</td>
+                <td>278</td>
+                <td>эксплуатируемый</td>
+              </tr>
+              <tr> 
+                <td>25</td>
+                <td>Гондурас</td>
+                <td>1163320</td>
+                <td>крупно-лиственные</td>
+                <td>69</td>
+                <td>604</td>
+                <td>0.2516</td>
+                <td>41</td>
+                <td>защитный</td>
+              </tr>
+              <tr> 
+                <td>26</td>
+                <td>Аруба</td>
+                <td>741550</td>
+                <td>мелко-лиственные</td>
+                <td>97</td>
+                <td>319</td>
+                <td>0.37732</td>
+                <td>264</td>
+                <td>резервный</td>
+              </tr>
+              <tr> 
+                <td>27</td>
+                <td>Австралия</td>
+                <td>2899583</td>
+                <td>мелко-лиственные</td>
+                <td>14</td>
+                <td>998</td>
+                <td>0.80634</td>
+                <td>67</td>
+                <td>эксплуатируемый</td>
+              </tr>
+              <tr> 
+                <td>28</td>
+                <td>Ботсвана</td>
+                <td>2065514</td>
+                <td>светло-хвойные</td>
+                <td>17</td>
+                <td>975</td>
+                <td>0.38493</td>
+                <td>276</td>
+                <td>эксплуатируемый</td>
+              </tr>
+              <tr> 
+                <td>29</td>
+                <td>Беларусь</td>
+                <td>2805664</td>
+                <td>мелко-лиственные</td>
+                <td>13</td>
+                <td>534</td>
+                <td>0.42434</td>
+                <td>284</td>
+                <td>защитный</td>
+              </tr>
+              <tr> 
+                <td>30</td>
+                <td>Италия</td>
+                <td>1626897</td>
+                <td>крупно-лиственные</td>
+                <td>16</td>
+                <td>310</td>
+                <td>0.57384</td>
+                <td>17</td>
+                <td>защитный</td>
+              </tr>
+              <tr> 
+                <td>31</td>
+                <td>Армения</td>
+                <td>690455</td>
+                <td>светло-хвойные</td>
+                <td>95</td>
+                <td>384</td>
+                <td>0.32162</td>
+                <td>175</td>
+                <td>эксплуатируемый</td>
+              </tr>
+              <tr> 
+                <td>32</td>
+                <td>Бенин</td>
+                <td>628302</td>
+                <td>светло-хвойные</td>
+                <td>92</td>
+                <td>198</td>
+                <td>0.38657</td>
+                <td>27</td>
+                <td>резервный</td>
+              </tr>
+              <tr> 
+                <td>33</td>
+                <td>Самоа</td>
+                <td>1475875</td>
+                <td>мелко-лиственные</td>
+                <td>29</td>
+                <td>895</td>
+                <td>0.62902</td>
+                <td>251</td>
+                <td>резервный</td>
+              </tr>
+              <tr> 
+                <td>34</td>
+                <td>Алжир</td>
+                <td>2617996</td>
+                <td>светло-хвойные</td>
+                <td>46</td>
+                <td>296</td>
+                <td>0.31799</td>
+                <td>72</td>
+                <td>эксплуатируемый</td>
+              </tr>
+              <tr> 
+                <td>35</td>
+                <td>Ирландия</td>
+                <td>1996210</td>
+                <td>крупно-лиственные</td>
+                <td>50</td>
+                <td>150</td>
+                <td>0.09133</td>
+                <td>92</td>
+                <td>эксплуатируемый</td>
+              </tr>
+              <tr> 
+                <td>36</td>
+                <td>Индонезия</td>
+                <td>387964</td>
+                <td>мелко-лиственные</td>
+                <td>21</td>
+                <td>345</td>
+                <td>0.01505</td>
+                <td>18</td>
+                <td>защитный</td>
+              </tr>
+              <tr> 
+                <td>37</td>
+                <td>Болгария</td>
+                <td>733665</td>
+                <td>мелко-лиственные</td>
+                <td>20</td>
+                <td>368</td>
+                <td>0.76538</td>
+                <td>150</td>
+                <td>защитный</td>
+              </tr>
+              <tr> 
+                <td>38</td>
+                <td>Вьетнам</td>
+                <td>2180744</td>
+                <td>крупно-лиственные</td>
+                <td>15</td>
+                <td>224</td>
+                <td>0.45501</td>
+                <td>141</td>
+                <td>защитный</td>
+              </tr>
+              <tr> 
+                <td>39</td>
+                <td>Самоа</td>
+                <td>765954</td>
+                <td>мелко-лиственные</td>
+                <td>45</td>
+                <td>808</td>
+                <td>0.96949</td>
+                <td>17</td>
+                <td>эксплуатируемый</td>
+              </tr>
+              <tr> 
+                <td>40</td>
+                <td>Индия</td>
+                <td>1424070</td>
+                <td>мелко-лиственные</td>
+                <td>65</td>
+                <td>166</td>
+                <td>0.05029</td>
+                <td>49</td>
+                <td>защитный</td>
+              </tr>
+              <tr> 
+                <td>41</td>
+                <td>Гамбия</td>
+                <td>2767163</td>
+                <td>крупно-лиственные</td>
+                <td>100</td>
+                <td>778</td>
+                <td>0.47149</td>
+                <td>277</td>
+                <td>эксплуатируемый</td>
+              </tr>
+              <tr> 
+                <td>42</td>
+                <td>Венесуэла</td>
+                <td>2448090</td>
+                <td>мелко-лиственные</td>
+                <td>26</td>
+                <td>188</td>
+                <td>0.31949</td>
+                <td>268</td>
+                <td>защитный</td>
+              </tr>
+              <tr> 
+                <td>43</td>
+                <td>Иордания</td>
+                <td>2757636</td>
+                <td>мелко-лиственные</td>
+                <td>19</td>
+                <td>198</td>
+                <td>0.26036</td>
+                <td>149</td>
+                <td>защитный</td>
+              </tr>
+              <tr> 
+                <td>44</td>
+                <td>Белиз</td>
+                <td>1212349</td>
+                <td>мелко-лиственные</td>
+                <td>91</td>
+                <td>271</td>
+                <td>0.92807</td>
+                <td>30</td>
+                <td>эксплуатируемый</td>
+              </tr>
+              <tr> 
+                <td>45</td>
+                <td>Бельгия</td>
+                <td>2533337</td>
+                <td>светло-хвойные</td>
+                <td>18</td>
+                <td>541</td>
+                <td>0.72807</td>
+                <td>132</td>
+                <td>эксплуатируемый</td>
+              </tr>
+              <tr> 
+                <td>46</td>
+                <td>Великобритания</td>
+                <td>700380</td>
+                <td>крупно-лиственные</td>
+                <td>33</td>
+                <td>934</td>
+                <td>0.86567</td>
+                <td>234</td>
+                <td>эксплуатируемый</td>
+              </tr>
+              <tr> 
+                <td>47</td>
+                <td>Гонконг</td>
+                <td>2557735</td>
+                <td>темно-хвойные</td>
+                <td>29</td>
+                <td>264</td>
+                <td>0.16953</td>
+                <td>129</td>
+                <td>защитный</td>
+              </tr>
+              <tr> 
+                <td>48</td>
+                <td>Ватикан</td>
+                <td>2604763</td>
+                <td>крупно-лиственные</td>
+                <td>98</td>
+                <td>349</td>
+                <td>0.79137</td>
+                <td>257</td>
+                <td>резервный</td>
+              </tr>
+              <tr> 
+                <td>49</td>
+                <td>Австрия</td>
+                <td>773084</td>
+                <td>мелко-лиственные</td>
+                <td>51</td>
+                <td>285</td>
+                <td>0.12182</td>
+                <td>216</td>
+                <td>защитный</td>
+              </tr>
+              <tr> 
+                <td>50</td>
+                <td>Андорра</td>
+                <td>778735</td>
+                <td>крупно-лиственные</td>
+                <td>89</td>
+                <td>531</td>
+                <td>0.44917</td>
+                <td>241</td>
+                <td>резервный</td>
+              </tr>
+              <tr> 
+                <td>51</td>
+                <td>Боливия</td>
+                <td>1017572</td>
+                <td>мелко-лиственные</td>
+                <td>30</td>
+                <td>468</td>
+                <td>0.28001</td>
+                <td>162</td>
+                <td>резервный</td>
+              </tr>
+              <tr> 
+                <td>52</td>
+                <td>Австралия</td>
+                <td>2911352</td>
+                <td>темно-хвойные</td>
+                <td>52</td>
+                <td>992</td>
+                <td>0.52337</td>
+                <td>125</td>
+                <td>эксплуатируемый</td>
+              </tr>
+              <tr> 
+                <td>53</td>
+                <td>Венесуэла</td>
+                <td>1046109</td>
+                <td>светло-хвойные</td>
+                <td>100</td>
+                <td>559</td>
+                <td>0.87515</td>
+                <td>25</td>
+                <td>эксплуатируемый</td>
+              </tr>
+              <tr> 
+                <td>54</td>
+                <td>Бенин</td>
+                <td>558090</td>
+                <td>темно-хвойные</td>
+                <td>17</td>
+                <td>671</td>
+                <td>0.09716</td>
+                <td>111</td>
+                <td>защитный</td>
+              </tr>
+              <tr> 
+                <td>55</td>
+                <td>Бенин</td>
+                <td>332916</td>
+                <td>крупно-лиственные</td>
+                <td>57</td>
+                <td>982</td>
+                <td>0.27788</td>
+                <td>278</td>
+                <td>резервный</td>
+              </tr>
+              <tr> 
+                <td>56</td>
+                <td>Бенин</td>
+                <td>2059086</td>
+                <td>светло-хвойные</td>
+                <td>9</td>
+                <td>330</td>
+                <td>0.29079</td>
+                <td>160</td>
+                <td>резервный</td>
+              </tr>
+              <tr> 
+                <td>57</td>
+                <td>Гонконг</td>
+                <td>1642277</td>
+                <td>темно-хвойные</td>
+                <td>13</td>
+                <td>584</td>
+                <td>0.08337</td>
+                <td>149</td>
+                <td>защитный</td>
+              </tr>
+              <tr> 
+                <td>58</td>
+                <td>Израиль</td>
+                <td>397521</td>
+                <td>темно-хвойные</td>
+                <td>57</td>
+                <td>526</td>
+                <td>0.37031</td>
+                <td>132</td>
+                <td>эксплуатируемый</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </div>
+    <div class="footer">
+      <p>© 2023 All rights disturbed </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+extends template.pug 
+
+block variables 
+    -var title='Table'
+    -var stylename='table_page.css'
+    -var textdesc='Уничтожение лесов и других лесных массивов часто происходит, из-за вырубки леса для сельскохозяйственных, городских или других целей землепользования. Негативные последствия вырубки лесов включают потерю биоразнообразия, увеличение выбросов парниковых газов, уменьшение количества местных осадков и снижение способности лесов регулировать климат и поддерживать экосистемы. Необходимо признавать важность лесов и их сохранение. Усилия по сохранению могут помочь предотвратить экологические последствия вырубки и поддержать существование и развитие.'
+    -var textdescsec='Сохранение также может помочь снизить риск исчезновения растений и животных, а также помочь защитить культурное наследие. Уничтожение лесов, оказывает пагубное влияние на животных и птиц, которые называют эту среду обитания своим домом. Многие виды живут в ветвях, гнездах и норах деревьев. Когда леса вырубаются, животные и птицы теряют свои дома и вынуждены перемещаться, адаптироваться или умирать. Если эта среда обитания будет уничтожена, то же самое произойдет и со сложной экосистемой, которая развивалась на протяжении сотен или тысяч лет. Уничтожая леса и места их обитания, мы уничтожаем жизненно важный аспект биоразнообразия нашей планеты, который необхдим для здорового существования.'
+    -var imagepath='../IMAGE/demage/demage.png'
+    -var list=[{'index':'1','region':'Ирландия','price':'1645584','class':'крупно-лиственные','bonitet':'38','height':'279','ndvi':'0.21907','age':'78','purpose':'эксплуатируемый'},{'index':'2','region':'Гватемала','price':'2444810','class':'мелко-лиственные','bonitet':'76','height':'705','ndvi':'0.88812','age':'146','purpose':'резервный'},{'index':'3','region':'Ватикан','price':'1318156','class':'светло-хвойные','bonitet':'27','height':'200','ndvi':'0.15538','age':'268','purpose':'резервный'},{'index':'4','region':'Ботсвана','price':'117404','class':'светло-хвойные','bonitet':'94','height':'140','ndvi':'0.12044','age':'70','purpose':'эксплуатируемый'},{'index':'5','region':'Австралия','price':'1498082','class':'крупно-лиственные','bonitet':'71','height':'725','ndvi':'0.18441','age':'279','purpose':'резервный'},{'index':'6','region':'Бразилия','price':'2622313','class':'светло-хвойные','bonitet':'31','height':'990','ndvi':'0.05843','age':'209','purpose':'резервный'},{'index':'7','region':'Гренада','price':'270751','class':'крупно-лиственные','bonitet':'26','height':'303','ndvi':'0.93954','age':'92','purpose':'резервный'},{'index':'8','region':'Венесуэла','price':'2545627','class':'крупно-лиственные','bonitet':'17','height':'445','ndvi':'0.66756','age':'154','purpose':'резервный'},{'index':'9','region':'Гамбия','price':'609820','class':'мелко-лиственные','bonitet':'95','height':'477','ndvi':'0.42431','age':'254','purpose':'резервный'},{'index':'10','region':'Алжир','price':'2854780','class':'светло-хвойные','bonitet':'47','height':'403','ndvi':'0.82131','age':'154','purpose':'резервный'},{'index':'11','region':'Габон','price':'776516','class':'крупно-лиственные','bonitet':'83','height':'475','ndvi':'0.59823','age':'110','purpose':'защитный'},{'index':'12','region':'Афганистан','price':'1122971','class':'крупно-лиственные','bonitet':'50','height':'720','ndvi':'0.12207','age':'190','purpose':'эксплуатируемый'},{'index':'13','region':'Аруба','price':'2426201','class':'темно-хвойные','bonitet':'46','height':'134','ndvi':'0.79148','age':'215','purpose':'эксплуатируемый'},{'index':'14','region':'Абхазия','price':'2828513','class':'крупно-лиственные','bonitet':'54','height':'405','ndvi':'0.89284','age':'131','purpose':'защитный'},{'index':'15','region':'Аргентина','price':'2221706','class':'крупно-лиственные','bonitet':'51','height':'282','ndvi':'0.33415','age':'129','purpose':'резервный'},{'index':'16','region':'Индия','price':'557504','class':'мелко-лиственные','bonitet':'78','height':'222','ndvi':'0.41112','age':'296','purpose':'резервный'},{'index':'17','region':'Аруба','price':'2575740','class':'крупно-лиственные','bonitet':'62','height':'891','ndvi':'0.94028','age':'198','purpose':'защитный'},{'index':'18','region':'Габон','price':'138070','class':'мелко-лиственные','bonitet':'39','height':'687','ndvi':'0.08482','age':'210','purpose':'защитный'},{'index':'19','region':'Израиль','price':'2176515','class':'темно-хвойные','bonitet':'3','height':'544','ndvi':'0.88423','age':'269','purpose':'эксплуатируемый'},{'index':'20','region':'Алжир','price':'1407380','class':'светло-хвойные','bonitet':'88','height':'104','ndvi':'0.20055','age':'272','purpose':'резервный'},{'index':'21','region':'Вьетнам','price':'2543869','class':'крупно-лиственные','bonitet':'36','height':'693','ndvi':'0.30884','age':'275','purpose':'защитный'},{'index':'22','region':'Австрия','price':'1665240','class':'светло-хвойные','bonitet':'55','height':'583','ndvi':'0.70665','age':'256','purpose':'эксплуатируемый'},{'index':'23','region':'Ватикан','price':'1769630','class':'крупно-лиственные','bonitet':'33','height':'199','ndvi':'0.60329','age':'165','purpose':'резервный'},{'index':'24','region':'Германия','price':'1544170','class':'темно-хвойные','bonitet':'44','height':'544','ndvi':'0.26593','age':'278','purpose':'эксплуатируемый'},{'index':'25','region':'Гондурас','price':'1163320','class':'крупно-лиственные','bonitet':'69','height':'604','ndvi':'0.2516','age':'41','purpose':'защитный'},{'index':'26','region':'Аруба','price':'741550','class':'мелко-лиственные','bonitet':'97','height':'319','ndvi':'0.37732','age':'264','purpose':'резервный'},{'index':'27','region':'Австралия','price':'2899583','class':'мелко-лиственные','bonitet':'14','height':'998','ndvi':'0.80634','age':'67','purpose':'эксплуатируемый'},{'index':'28','region':'Ботсвана','price':'2065514','class':'светло-хвойные','bonitet':'17','height':'975','ndvi':'0.38493','age':'276','purpose':'эксплуатируемый'},{'index':'29','region':'Беларусь','price':'2805664','class':'мелко-лиственные','bonitet':'13','height':'534','ndvi':'0.42434','age':'284','purpose':'защитный'},{'index':'30','region':'Италия','price':'1626897','class':'крупно-лиственные','bonitet':'16','height':'310','ndvi':'0.57384','age':'17','purpose':'защитный'},{'index':'31','region':'Армения','price':'690455','class':'светло-хвойные','bonitet':'95','height':'384','ndvi':'0.32162','age':'175','purpose':'эксплуатируемый'},{'index':'32','region':'Бенин','price':'628302','class':'светло-хвойные','bonitet':'92','height':'198','ndvi':'0.38657','age':'27','purpose':'резервный'},{'index':'33','region':'Самоа','price':'1475875','class':'мелко-лиственные','bonitet':'29','height':'895','ndvi':'0.62902','age':'251','purpose':'резервный'},{'index':'34','region':'Алжир','price':'2617996','class':'светло-хвойные','bonitet':'46','height':'296','ndvi':'0.31799','age':'72','purpose':'эксплуатируемый'},{'index':'35','region':'Ирландия','price':'1996210','class':'крупно-лиственные','bonitet':'50','height':'150','ndvi':'0.09133','age':'92','purpose':'эксплуатируемый'},{'index':'36','region':'Индонезия','price':'387964','class':'мелко-лиственные','bonitet':'21','height':'345','ndvi':'0.01505','age':'18','purpose':'защитный'},{'index':'37','region':'Болгария','price':'733665','class':'мелко-лиственные','bonitet':'20','height':'368','ndvi':'0.76538','age':'150','purpose':'защитный'},{'index':'38','region':'Вьетнам','price':'2180744','class':'крупно-лиственные','bonitet':'15','height':'224','ndvi':'0.45501','age':'141','purpose':'защитный'},{'index':'39','region':'Самоа','price':'765954','class':'мелко-лиственные','bonitet':'45','height':'808','ndvi':'0.96949','age':'17','purpose':'эксплуатируемый'},{'index':'40','region':'Индия','price':'1424070','class':'мелко-лиственные','bonitet':'65','height':'166','ndvi':'0.05029','age':'49','purpose':'защитный'},{'index':'41','region':'Гамбия','price':'2767163','class':'крупно-лиственные','bonitet':'100','height':'778','ndvi':'0.47149','age':'277','purpose':'эксплуатируемый'},{'index':'42','region':'Венесуэла','price':'2448090','class':'мелко-лиственные','bonitet':'26','height':'188','ndvi':'0.31949','age':'268','purpose':'защитный'},{'index':'43','region':'Иордания','price':'2757636','class':'мелко-лиственные','bonitet':'19','height':'198','ndvi':'0.26036','age':'149','purpose':'защитный'},{'index':'44','region':'Белиз','price':'1212349','class':'мелко-лиственные','bonitet':'91','height':'271','ndvi':'0.92807','age':'30','purpose':'эксплуатируемый'},{'index':'45','region':'Бельгия','price':'2533337','class':'светло-хвойные','bonitet':'18','height':'541','ndvi':'0.72807','age':'132','purpose':'эксплуатируемый'},{'index':'46','region':'Великобритания','price':'700380','class':'крупно-лиственные','bonitet':'33','height':'934','ndvi':'0.86567','age':'234','purpose':'эксплуатируемый'},{'index':'47','region':'Гонконг','price':'2557735','class':'темно-хвойные','bonitet':'29','height':'264','ndvi':'0.16953','age':'129','purpose':'защитный'},{'index':'48','region':'Ватикан','price':'2604763','class':'крупно-лиственные','bonitet':'98','height':'349','ndvi':'0.79137','age':'257','purpose':'резервный'},{'index':'49','region':'Австрия','price':'773084','class':'мелко-лиственные','bonitet':'51','height':'285','ndvi':'0.12182','age':'216','purpose':'защитный'},{'index':'50','region':'Андорра','price':'778735','class':'крупно-лиственные','bonitet':'89','height':'531','ndvi':'0.44917','age':'241','purpose':'резервный'},{'index':'51','region':'Боливия','price':'1017572','class':'мелко-лиственные','bonitet':'30','height':'468','ndvi':'0.28001','age':'162','purpose':'резервный'},{'index':'52','region':'Австралия','price':'2911352','class':'темно-хвойные','bonitet':'52','height':'992','ndvi':'0.52337','age':'125','purpose':'эксплуатируемый'},{'index':'53','region':'Венесуэла','price':'1046109','class':'светло-хвойные','bonitet':'100','height':'559','ndvi':'0.87515','age':'25','purpose':'эксплуатируемый'},{'index':'54','region':'Бенин','price':'558090','class':'темно-хвойные','bonitet':'17','height':'671','ndvi':'0.09716','age':'111','purpose':'защитный'},{'index':'55','region':'Бенин','price':'332916','class':'крупно-лиственные','bonitet':'57','height':'982','ndvi':'0.27788','age':'278','purpose':'резервный'},{'index':'56','region':'Бенин','price':'2059086','class':'светло-хвойные','bonitet':'9','height':'330','ndvi':'0.29079','age':'160','purpose':'резервный'},{'index':'57','region':'Гонконг','price':'1642277','class':'темно-хвойные','bonitet':'13','height':'584','ndvi':'0.08337','age':'149','purpose':'защитный'},{'index':'58','region':'Израиль','price':'397521','class':'темно-хвойные','bonitet':'57','height':'526','ndvi':'0.37031','age':'132','purpose':'эксплуатируемый'}]
+
+mixin CREATE_GRAPH()
+    form
+        div.content__graph__ox
+            div.text='Ось Ox'
+            input(type='radio', name='x', id='region')
+            label(for='region')='Регион'
+            br
+
+            input(type='radio', name='x', id='classtype') 
+            label(for='classtype')='Класс'
+            br
+
+            input(type='radio', name='x', id='purpose') 
+            label(for='purpose')='Целевое назначение'
+        div.content__graph__oy
+            div.text='Ось Oy'
+
+            input(type='radio', name='y', id='minprise') 
+            label(for='minprise')='Минимальная стоимость'
+            br
+
+            input(type='radio', name='y', id='maxprise') 
+            label(for='maxprise')='Максимальная стоимость'
+            br
+
+            input(type='radio', name='y', id='minndvi') 
+            label(for='minndvi')='Минимальный NDVI'
+            br
+
+            input(type='radio', name='y', id='maxndvi') 
+            label(for='maxndvi')='Максимальный NDVI'
+            br
+
+            input(type='radio', name='y', id='count') 
+            label(for='count')='Количество'
+        //- input(type='button' value='Построить') 
+mixin CREATE_SORT()
+    form
+        div.content__sort__block
+            select
+                option='NONE'
+                option='Регион'
+                option='Возраст'
+            input(type='checkbox', name='order',id='oredr')
+            label(for='oredr')='max→min'
+
+        div.content__sort__block
+            select
+                option='NONE'
+                option='Стоимость'
+                option='Бонитет'
+                option='NDVI'
+            input(type='checkbox', name='choose', id='choose')
+            label(for='choose')='max→min'
+
+        div.content__sort__block
+            select
+                option='NONE'
+                option='Класс'
+                option='Высота'
+                option='Целевое назначение'
+            input(type='checkbox', name='choose', id='third')
+            label(for='third')='max→min'
+
+        //- input(type="button",value="Сортировать")
+mixin CREATE_FILTER()
+    form
+        div.content__filter__block
+            label='Регион: '
+            input(type='text')
+
+        div.content__filter__block
+            label='Стоимость: от'
+            input(type='number')
+            label=' до'
+            input(type='number')
+
+        div.content__filter__block
+            label='Высота: от'
+            input(type='number')
+            label=' до'
+            input(type='number')
+        
+        div.content__filter__block
+            label='Возраст: от'
+            input(type='text')
+            label=' до'
+            input(type='text')
+        
+        div.content__filter__block
+            label='NDVI: от'
+            input(type='text')
+            label=' до'
+            input(type='text')
+
+        div.content__filter__block
+            label='Бонитет: от'
+            input(type='text')
+            label=' до'
+            input(type='text')
+        
+        div.content__filter__block
+            label='Целевое назначение: '
+            input(type='text')
+        //- input(type='button', value='Фильтровать')
+mixin FILL_TABLE(list)
+    each item in list 
+        tr 
+            td= item.index
+            td=item.region
+            td=item.price
+            td=item.class
+            td=item.bonitet
+            td=item.height
+            td=item.ndvi
+            td=item.age
+            td=item.purpose
+mixin CREATE_TABLE(list)
+    table   
+        thead   
+            tr 
+                th= '#' 
+                th= 'Регион'
+                th= 'Стоимость'
+                th= 'Класс'
+                th= 'Бонитет'
+                th= 'Cредняя высота'
+                th= 'NDVI'
+                th= 'Cредний возраст'
+                th= 'Целевое назначение'
+        
+        tbody 
+            +FILL_TABLE(list)
+mixin CREATE_DETAIL_LIST()
+    details.content__graph
+        summary= 'График'
+        +CREATE_GRAPH()
+    details.content__sort
+        summary='Сортировка'
+        +CREATE_SORT()
+    details.content__filter
+        summary='Фильтр'
+        +CREATE_FILTER()
+    details.content__tab
+        summary='Распределение лесов'
+        div.content__tab__scrolltable
+            +CREATE_TABLE(list)
+
+block main_content 
+    
+    div.content__descriprion
+        div.content__descriprion__text #{textdesc} 
+            br
+            span #{textdescsec}
+        img(src=imagepath) 
+
+    +CREATE_DETAIL_LIST()
