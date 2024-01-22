@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Account</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href='styles/client.css' />
+    <script type="text/javascript" src="scripts/client.js"></script>
+    </head>
+    <body>
+        <header id="header">
+            <h1 id="header">Personal Account</h1>
+        </header>
+        
+            <div>
+                <input type="button" value="back" onclick="location.href='index.html'">
+              </div>
+        
+
+        <main>
+            <section>
+                <h1>Profile</h1>
+                <p>Name: <span id="name"></span></p>
+                <p>Email: <span id="email"></span></p>
+                <p>Gender: <input id="genderSelect" type="radio" name="gender" value="0"> Male
+                    <input id="genderSelect" type="radio" name="gender" value="1"> Female
+                    <!-- <input id="genderSelect" type="radio" name="gender" value="2"> Non-Binary--></p> 
+                <button type="submit">Save</button>
+            </section>
+
+            <section>
+                <h1>Activity</h1>
+                <ul>
+                    <li></li>
+                    
+                </ul>
+            </section>
+
+            <section>
+                <h1>Settings</h1>
+                <form>
+                    <label><input type="checkbox" id="darkModeChkW" onclick=dark()> Dark Mode</label>
+                    <button type="submit">Save</button>
+                </form>
+            </section>
+        </main>
+
+       
+    </body>
+
+    <script>
+      document.getElementById("email").innerHTML=window.localStorage.getItem("email");
+    //   function dark(){
+    // if (document.getElementById("darkModeChkW").checked){
+    //     document.body.style.backgroundColor = "black";
+    //     document.body.style.color = "yellow";
+    //     document.getElementById("header").style.color = "red";
+
+    // }
+    // else{
+    //     document.body.style.backgroundColor = "#ADC8E6";
+    //     document.body.style.color = "#0c0f49";
+    // }
+//}
+    
+    
+    </script>
+</html>

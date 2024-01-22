@@ -1,0 +1,159 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+  }
+  
+  /* Header style */
+  header {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Nav style */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+  }
+  
+  li {
+    margin: 0 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+  
+  /* Main content style */
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  section {
+    background-color: #f1f1f1;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type=radio] {
+    display: none;
+  }
+  
+  /* Footer style */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #e4e4e4;
+  }
+  
+  p { 
+    font-size: 12px;
+    color: #333;
+  }
+  
+  /* Responsive styles */
+  
+  ul input{
+
+  }
+
+  
+  header+div input {
+    background-color: #FFFFFF;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #222222;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 13px 23px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+    user-select: none;
+    -webkit-user-select: none;
+    width: auto;
+  }
+  
+  header+div input:focus-visible {
+    box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+    transition: box-shadow .2s;
+  }
+  
+  header+div input:active {
+    background-color: #F7F7F7;
+    border-color: #000000;
+    transform: scale(.96);
+  }
+  
+  header+div input:disabled {
+    border-color: #DDDDDD;
+    color: #DDDDDD;
+    cursor: not-allowed;
+    opacity: 1;
+  }
+  
+  header+div{
+    text-align: right;
+    float:right;
+    margin:0px 10px 0 0;
+  }
+
+  body{
+    /* background: #ADC8E6; */
+  }
+
+  main{
+    /* background: #6986a77a; */
+    
+  }
+
+  section{
+    /* background: #537caa7c; */
+    
+  }
+
+  h1{
+    /* color :#0c0f49	; */
+  }
+
+  section p{
+    font-size: 1.2rem;
+  }
