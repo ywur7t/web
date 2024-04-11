@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-family: "Courier New", Courier, monospace;
+}
+input {
+  width: 2rem;
+}
+.content {
+  width: 70%;
+  margin: auto;
+  height: 100vh;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  column-gap: 1rem;
+}
+div.form_choose {
+  display: grid;
+  column-gap: 10rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  grid-template-columns: 5fr 1fr;
+}
+div.form_choose ul {
+  grid-column: 1/2;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+}
+ul.form_choose:first-child {
+  grid-column: 1/2;
+  text-align: right;
+}
+ul.form_choose:last-child {
+  grid-column: 2/3;
+  text-align: right;
+}
+
+div.form_choose button {
+  grid-column: 2/3;
+}
+#trigonometric,
+#algebra,
+#buttons,
+textarea {
+  display: none;
+}
+/* ////////////////////////////////////////////// */
+/* ////////////////////////////////////////////// */
+/* ////////////////////////////////////////////// */
+#trigonometric,
+#algebra {
+  grid-template-columns: 2fr 1fr 2fr;
+  column-gap: 1rem;
+  text-align: center;
+}
+#algebra {
+  width: 70%;
+  margin: 0 auto;
+}
+#algebra select {
+  width: 50%;
+}
+#trigonometric select {
+  width: 30%;
+}
+div.first {
+  grid-column: 1/2;
+}
+select {
+  grid-column: 2/3;
+  margin: auto;
+}
+div.second {
+  grid-column: 3/4;
+}
+
+#buttons {
+  text-align: right;
+  width: 50%;
+  margin: 2rem auto;
+}
+.form_choose button {
+  width: 50%;
+}
+
+textarea {
+  width: 70vw;
+  height: 200px;
+  resize: none;
+}

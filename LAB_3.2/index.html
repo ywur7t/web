@@ -1,20 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-    <h3>Languages</h3>
-    <ul>
-        <li><a href="#">Python</a></li>
-        <li><a href="#">C++</a></li>
-        <li id="test"><a href="#" >Java</a></li>
-        <li><a href="#">JavaScript</a></li>
-    </ul>
-</body>
-<script src="script.js"></script>
+  </head>
+  <body>
+    <div class="content">
+      <!-- список форм комплексного чисела -->
+      <div class="form_choose">
+        <ul class="form_choose" id="form_list">
+          <li>
+            <label for=""
+              ><input
+                type="radio"
+                name="form"
+                id="input_trigon"
+              />Trigonometry</label
+            >
+          </li>
+          <li>
+            <label for=""
+              ><input
+                type="radio"
+                name="form"
+                id="input_algebra"
+              />Algebra</label
+            >
+          </li>
+        </ul>
+        <!-- кнопка выбора -->
+        <button id="show" onClick="ShowInputForm()">Show</button>
+      </div>
+
+      <!-- тригонометрическая форма  -->
+      <div id="trigonometric">
+        <div class="first">
+          <input type="number" id="fr" />
+          <label> * ( cos </label>
+          <input type="number" id="fcos" />
+          <label> + i * sin </label>
+          <input type="number" id="fsin" />
+          <label> )</label>
+        </div>
+
+        <select multiple id="select_trigon">
+          <option>+</option>
+          <option>-</option>
+          <option>*</option>
+          <option>/</option>
+        </select>
+
+        <div class="second">
+          <input type="number" id="sr" />
+          <label> * ( cos </label>
+          <input type="number" id="scos" />
+          <label> + i * sin </label>
+          <input type="number" id="ssin" />
+          <label> )</label>
+        </div>
+      </div>
+
+      <!-- алгебраическая форма  -->
+      <div id="algebra">
+        <div class="first">
+          <input type="number" id="fa" />
+          <label> + </label>
+          <input type="number" id="fb" />
+          <label> i</label>
+        </div>
+
+        <select multiple id="select_algebra">
+          <option>+</option>
+          <option>-</option>
+          <option>*</option>
+          <option>/</option>
+        </select>
+
+        <div class="second">
+          <input type="number" id="sa" />
+          <label> + </label>
+          <input type="number" id="sb" />
+          <label> i</label>
+        </div>
+      </div>
+
+      <!-- кнопки  -->
+      <div id="buttons">
+        <button id="clear_all" onClick="Clear_All()">Clear</button>
+        <button id="compute" onClick="Compute_Result()">Compute</button>
+      </div>
+      <!-- поле вывода-->
+      <textarea name="" id="textarea" readonly></textarea>
+    </div>
+  </body>
 </html>
