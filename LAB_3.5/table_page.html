@@ -1,0 +1,156 @@
+<!DOCTYPE html >
+<html lang="ru">
+  <head>       
+    <meta charset="utf-8"/>
+    <title>Table</title>
+    <link rel="stylesheet" href="../css/table_page.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@1,600&amp;display=swap" rel="stylesheet"/>
+    <link rel="shortcut icon" href="./IMAGE/icon/icon.ico" type="image/x-icon"/>
+  </head>
+  <body> 
+    <div class="content">
+      <div class="content__navigation">
+        <div class="content__navigation__left">
+          <div class="content__navigation__left__dismenu">☰
+            <div class="content__navigation__left__dismenu__hiddenmenu"><a href="table_page.html">Распределение</a><a href="waterfall_page.html">Silverfall</a><a href="plants_page.html">Plants</a><a href="cave_page.html">Caves</a><a href="fort_page.html">Fortress</a><a href="lake_page.html">Lake</a>
+            </div>
+          </div><a href="main_page.html">Twilight Grove</a>
+        </div>
+        <div class="content__navigation__right"><a href="table_page.html">Распределение</a><a href="waterfall_page.html">Silverfall</a><a href="plants_page.html">Plants</a><a href="cave_page.html">Caves</a><a href="fort_page.html">Fortress</a><a href="lake_page.html">Lake</a>
+        </div>
+      </div>
+      <div class="content__descriprion">
+        <div class="content__descriprion__text">Уничтожение лесов и других лесных массивов часто происходит, из-за вырубки леса для сельскохозяйственных, городских или других целей землепользования. Негативные последствия вырубки лесов включают потерю биоразнообразия, увеличение выбросов парниковых газов, уменьшение количества местных осадков и снижение способности лесов регулировать климат и поддерживать экосистемы. Необходимо признавать важность лесов и их сохранение. Усилия по сохранению могут помочь предотвратить экологические последствия вырубки и поддержать существование и развитие. <br/><span>Сохранение также может помочь снизить риск исчезновения растений и животных, а также помочь защитить культурное наследие. Уничтожение лесов, оказывает пагубное влияние на животных и птиц, которые называют эту среду обитания своим домом. Многие виды живут в ветвях, гнездах и норах деревьев. Когда леса вырубаются, животные и птицы теряют свои дома и вынуждены перемещаться, адаптироваться или умирать. Если эта среда обитания будет уничтожена, то же самое произойдет и со сложной экосистемой, которая развивалась на протяжении сотен или тысяч лет. Уничтожая леса и места их обитания, мы уничтожаем жизненно важный аспект биоразнообразия нашей планеты, который необхдим для здорового существования.</span></div><img src="../IMAGE/demage/demage.png"/>
+      </div>
+      <details class="content__graph">
+        <summary>График</summary>
+        <form id="graph_form">
+          <div class="content__graph__ox">
+
+            <div class="text">Ось Ox</div>
+            <input type="radio" name="ox" id="region" value="region" checked/><label for="region">Регион</label><br/>
+            <input type="radio" name="ox" id="classtype" value="class"/><label for="classtype">Класс</label><br/>
+            <input type="radio" name="ox" id="purpose" value="purpose"/><label for="purpose">Целевое назначение</label>
+          </div>
+
+          <div class="content__graph__oy">
+            <div class="text">Ось Oy</div>
+            <input type="checkbox" name="oy" id="minprise" value="prise" onclick="changeState(this.form, value)" /><label for="minprise">Минимальная стоимость</label><br/>
+            <input type="checkbox" name="oy" id="maxprise" value="prise" onclick="changeState(this.form, value)" /><label for="maxprise">Максимальная стоимость</label><br/>
+            <input type="checkbox" name="oy" id="maxndvi" value="ndvi"  onclick="changeState(this.form, value)" /><label for="maxndvi">Максимальный NDVI</label><br/>
+            <input type="checkbox" name="oy" id="minndvi" value="ndvi" onclick="changeState(this.form, value)" /><label for="minndvi">Минимальный NDVI</label><br/>
+            <input type="checkbox" name="oy" id="minage" value="age" onclick="changeState(this.form, value)" /><label for="count">Максимальный Возраст</label><br/>
+            <input type="checkbox" name="oy" id="maxage" value="age" onclick="changeState(this.form, value)" /><label for="count">Минимальный Возраст</label>
+          </div>
+
+          <p><input type="button" value="Построить" onclick="drawGraph(this.form)"/></p>
+        
+        </form>
+        <svg height="10"></svg>
+      </details>
+
+
+
+
+
+
+      <details class="content__sort">
+        <summary>Сортировка</summary>
+        <form id = "sort">
+
+          <div class="content__sort__block">
+            <select id="fieldsFirst"></select>            
+            max→min <input type="checkbox"  id="fieldsFirstDesc"/>
+          </div>
+
+          <div class="content__sort__block">
+            <select id="fieldsSecond"></select>
+            max→min <input type="checkbox" id="fieldsSecondDesc"/>
+          </div>
+
+          <div class="content__sort__block">
+            <select id="fieldsThird"></select>
+            max→min <input type="checkbox" id="fieldsThirdDesc"/>
+            
+          </div>
+
+
+          <input type="button" value="Сортировать" id="Sort_btn" />
+          <input type="button" value="Сбросить сортировку" id="Clear_Sort_btnf" />
+          
+        </form>
+      </details>
+
+
+
+
+
+
+
+
+      
+      <details class="content__filter">
+        <summary>Фильтр</summary>
+        <form id="filter">
+          
+            <p>
+              <label for="region">Регион: </label>
+              <input type="text"  id="region" />
+            </p>
+            
+            <p>
+              <label for="PriceFrom">Стоимость: </label>
+              от <input type="number" id="PriceFrom" />
+              до <input type="number" id="PriceTo" />
+            </p>
+            
+            <p>
+              <label for="HeightFrom">Высота: </label>
+              от <input type="number" id="HeightFrom" />
+              до <input type="number" id="HeightTo" />
+            </p>
+            
+            <p>
+              <label for="AgeFrom">Возраст: </label>
+              от <input type="number"  id="AgeFrom" />
+              до <input type="number" id="AgeTo" />
+            </p>
+            
+            <p>
+              <label for="BonFrom">Бонитет: от</label>
+              от <input type="number" id="BonFrom"/>
+              до <input type="number" id="BonTo"/>
+            </p>
+            
+            <p>
+              <label for="purpose">Целевое назначение: </label>
+              <input type="text" id="purpose"/>
+            </p>
+            
+          <input type="button" value="Найти" id="search"/>
+          <input type="button" value="Очистить фильтры" id="clear"/>
+        </form>
+      </details>
+      <details class="content__tab">
+        <summary>Распределение лесов</summary>
+        <div class="content__tab__scrolltable">
+          <table id="list">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+    </div>
+    <div class="footer">
+      <p>© 2023 All rights disturbed </p>
+    </div>
+  </body>
+  <script src="..\script\script.js"defer></script>
+  <script src="..\script\data.js"defer></script>
+  <script src="http://d3js.org/d3.v7.min.js"></script>
+
+  
+</html>
