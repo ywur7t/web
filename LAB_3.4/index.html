@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Лабораторная работа 4</title>
+    <script src="http://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="setting">
+      
+        <p>Время(Скорость)
+            <input type="number" id="animation_time">
+        </p>
+        
+        <!-- <p>
+            <input type="checkbox" id="less_checkbox"><label for="less_label">Уменьшение</label>
+            <input type="number" id="less_number">
+            
+            <br>
+-->
+            <input type="checkbox" id="rotate_checkbox">
+            <label for="rotate_label">Вращение</label>
+            <input type="number" id="rotate_degree">
+        <!-- </p>  -->
+        
+        <br>
+        <input type="button" value="Start" id="animation_btn">
+        <input type="button" value="Clear" id="clear_btn">
+
+    </form>
+
+    
+
+    <svg></svg>
+  </body>
+  <script src="script.js"></script>
+</html>

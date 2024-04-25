@@ -1,0 +1,15 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+p{
+    display: inline-block;
+    margin:10px;
+}
+svg {
+    border: 1px solid grey;
+    margin: 10 0 0 10px;
+  }
