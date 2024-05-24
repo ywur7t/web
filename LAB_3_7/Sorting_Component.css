@@ -1,0 +1,62 @@
+#form_element #content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding:5%;
+}
+
+#forma {
+    flex: 1;
+    /* margin-right: 20px; */
+}
+
+#table_ready {
+    flex: 3;
+    
+}
+
+thead tr{
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    color:#00000092;
+
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: #393939;
+}
+
+tbody tr{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(50px);
+    color:#ccf4ff;
+    text-align: center;
+
+    font-family: "Inter", sans-serif;
+    font-weight: normal;
+    font-size: 35px;
+    color: #fff;
+}
+
+select{
+    font-family: "Inter", sans-serif;
+    font-weight: normal;
+    font-size: 28px;
+    color: #828282;
+}
+
+label{
+    font-family: "Inter", sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    color: #fff;
+}
+button{
+    font-family: "Inter", sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    color: #828282;
+    background: #fff;
+    border-radius: 1px 10px 10px 10px;
+    margin:2%;
+}
