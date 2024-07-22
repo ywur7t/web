@@ -1,0 +1,22 @@
+{% macro render_list(list) %}
+    {% for item in list %}
+        {% if item == list[-1] %}
+            {{item}}.
+        {% else %}
+            {{item}},
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+
+{% macro ind_render_list(list) %}
+    {% for item in list %}
+<li>
+        {% if item == list[-1] %}
+            {{item}}.
+        {% else %}
+            {{item}},
+        {% endif %}
+    </li>
+    {% endfor %}
+{% endmacro %}

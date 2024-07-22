@@ -1,0 +1,22 @@
+{% from "macros.html" import render_list %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Пример JINJA2 </title>
+    </head>
+    <body>
+        <p> Привет,
+            {% if user['gender'] == 'ж' %} студентка
+            {% else %} студент
+            {% endif %}
+            {{add_spaces(user['name'])}}!
+        </p>
+
+        <p> Ваша образовательная программа {{user['program']}}. </p>
+
+        <p> Вы изучаете дисциплины:<br>
+
+            {{ render_list(user['subjects']) }}
+        </p>
+    </body>
+</html>

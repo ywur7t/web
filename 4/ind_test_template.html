@@ -1,0 +1,43 @@
+{% from "macros.html" import ind_render_list %}
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Пример JINJA2 </title>
+    </head>
+    <body>
+        <p> Привет, {% if user['gender'] == 'ж' %} студентка
+            {% else %} студент
+            {% endif %}
+            <span style="color:green;font-weight:700;">{{add_spaces(user['name'])}}</span>! </p>
+
+        <p> Ваша образовательная программа
+            <span style="font-weight:900">
+            {{ '38.03.05' if user['program'] == 'Бизнес-информатика' else '38.03.01' }}
+            {{user['program']}}.
+            </span>
+        </p>
+
+        <p>
+            Вы изучаете
+             {{add_count(user['subjects'])}}
+
+
+
+            <ul>
+            {{ ind_render_list(user['subjects']) }}
+<!--            -->
+<!--                {% for dis in user['subjects'] %}-->
+<!--                <li>-->
+<!--                    {% if dis == user['subjects'][-1] %}-->
+<!--                    {{dis}}.-->
+<!--                    {% else %}-->
+<!--                    {{dis}},-->
+<!--                    {% endif %}-->
+<!--                </li>-->
+<!--                {% endfor %}-->
+            </ul>
+        </p>
+    </body>
+</html>
+
